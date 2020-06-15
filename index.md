@@ -10,7 +10,7 @@ Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre Univers
 
 - [Laboratório de Genética e Biologia Molecular](https://evoecogenecons.wixsite.com/labbiomol/membros) 
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
-- [500 Women Scientists](https://500womenscientists.org/portugues-nosso-compromisso) Justiça, Equidade, Diversidade e Inclusão
+- [500 Women Scientists:](https://500womenscientists.org/portugues-nosso-compromisso) Justiça, Equidade, Diversidade e Inclusão
 
 
 

@@ -1,6 +1,6 @@
 ##  <span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span>
 
-Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre Universidade do Vale do Rio dos Sinos - Unisinos.
+Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Universidade do Vale do Rio dos Sinos - Unisinos.
 
 
 - [Currículo Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869341A1)

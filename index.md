@@ -1,8 +1,18 @@
-## Welcome to GitHub Pages
+## Fernanda Rodrigues de Avila
 
-You can use the [editor on GitHub](https://github.com/avilaf/avilaf.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre Universidade do Vale do Rio dos Sinos - Unisinos.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Currículo Lattes:[Link](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869341A1)
+- ResearchGate:[Link](https://www.researchgate.net/profile/Fernanda_Rodrigues_De_Avila)
+- ORCID:[Link](https://orcid.org/0000-0002-1572-2722)
+
+
+- Laboratório de Genética e Biologia Molecular:[Link](https://evoecogenecons.wixsite.com/labbiomol/membros) 
+- Laboratório de Ecologia de Vertebrados Terrestres :[Link](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
+
+
+
+
 
 ### Markdown
 

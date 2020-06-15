@@ -1,4 +1,4 @@
-![](https://github.com/avilaf/avilaf.github.io/blob/master/sapo_rosa.jpg) 
+![](https://github.com/avilaf/avilaf.github.io/blob/master/sapo_rosa.png) 
 
 ##  <span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span>
 

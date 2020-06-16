@@ -6,6 +6,11 @@ Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Univ
 
 <span style="color: IndianRed">Contato: </span> *fernandar.avila@gmail.com*
 
+
+
+
+#### <span style="color: IndianRed"> Informações:  </span>
+
 - [Currículo Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869341A1)
 - [ResearchGate](https://www.researchgate.net/profile/Fernanda_Rodrigues_De_Avila)
 - [ORCID](https://orcid.org/0000-0002-1572-2722)

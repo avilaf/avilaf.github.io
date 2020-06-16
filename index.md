@@ -9,6 +9,7 @@ Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Univ
 
 
 
+
 #### <span style="color: IndianRed"> Informações:  </span>
 
 - [Currículo Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869341A1)
@@ -20,7 +21,7 @@ Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Univ
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
 - [500 Women Scientists:](https://500womenscientists.org/portugues-nosso-compromisso) Justiça, Equidade, Diversidade e Inclusão
 
-![](https://github.com/avilaf/avilaf.github.io/blob/master/sapo_rosa.png) 
+![](avilaf/avilaf.github.io/blob/master/sapo_rosa.png) 
 
 
 

@@ -3,7 +3,8 @@
 ##  <span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span>
 
 Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Universidade do Vale do Rio dos Sinos - Unisinos.
-Contato: **<span style="color: IndianRed"> fernandar.avila@gmail.com </span>**
+
+<span style="color: IndianRed">Contato: </span> *fernandar.avila@gmail.com*
 
 - [Currículo Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869341A1)
 - [ResearchGate](https://www.researchgate.net/profile/Fernanda_Rodrigues_De_Avila)

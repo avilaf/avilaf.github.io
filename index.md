@@ -2,7 +2,7 @@
 <center>
  <font size="5"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>
 </center>
-![](/assets/space.png)
+![](/assets/smallspace.png)
 <p align="justify"> Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Universidade do Vale do Rio dos Sinos - Unisinos.</p>
 ![](/assets/smalline.png)
 <p align="justify">Tenho alguma experiência trabalhando com Ecologia e História Natural de anfíbios e répteis do sul do Brasil. Durante meu doutorado, tenho me interessado em usar os anfíbios como modelos, e a biologia molecular como ferramenta, para entender as dinâmicas temporais da paisagem no Planalto das Araucárias.</p>

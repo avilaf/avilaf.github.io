@@ -21,8 +21,7 @@ Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Univ
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
 - [500 Women Scientists:](https://500womenscientists.org/portugues-nosso-compromisso) Justiça, Equidade, Diversidade e Inclusão
 
-![](avilaf/avilaf.github.io/blob/master/sapo_rosa.png) 
-
+![](/assets/sapo_rosa.png) 
 
 
 

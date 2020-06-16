@@ -1,7 +1,7 @@
 
 <center>
- <font size="6"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span>
-</center></font>
+ <font size="6"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>
+</center>
 
 <p align="justify"> Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Universidade do Vale do Rio dos Sinos - Unisinos.</p>
 ![](/assets/smalline.png)

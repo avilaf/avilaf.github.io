@@ -1,4 +1,4 @@
-![Português](https://avilaf.github.io/) 
+[*Português*](https://avilaf.github.io/) 
 <center>
  <font size="5"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>
 </center>

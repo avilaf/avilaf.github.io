@@ -5,7 +5,7 @@
 ![](/assets/smallspace.png)
 <p align="justify"> Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Universidade do Vale do Rio dos Sinos - Unisinos.</p>
 ![](/assets/line4.png)
-<p align="justify">Tenho alguma experiência trabalhando com Ecologia e História Natural de anfíbios e répteis do sul do Brasil. Durante meu doutorado, tenho me interessado em usar os anfíbios como modelos, e a biologia molecular como ferramenta, para entender as dinâmicas temporais da paisagem no Planalto das Araucárias.</p>
+<p align="justify">Tenho experiência com trabalhos em Ecologia e História Natural de anfíbios e répteis do sul do Brasil. Recentemente tenho voltado meu trabalho para questões de Biogeografia Histórica e Ecologia Evolutiva. Durante meu doutorado, tenho me interessado em usar os anfíbios como modelos, e a biologia molecular como ferramenta, para entender as dinâmicas temporais da paisagem no Planalto das Araucárias.</p>
 
 <span style="color: IndianRed">Contato: </span> *<fernandar.avila@gmail.com>*
 

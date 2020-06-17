@@ -1,5 +1,5 @@
 
-[*English Version*](https://avilaf.github.io/english)
+[*English*](https://avilaf.github.io/english)
 
 <center> 
 <font size="5"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>

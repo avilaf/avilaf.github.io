@@ -1,6 +1,8 @@
 <center>
 <font size="1"> [*English Version*](https://avilaf.github.io/english) </font> 
- <font size="5"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>
+</center>
+<center> 
+<font size="5"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>
 </center>
 ![](/assets/smallspace.png)
 <p align="justify"> Bióloga, doutoranda em Biologia: Diversidade e Manejo de Vida Silvestre na Universidade do Vale do Rio dos Sinos - Unisinos.</p>

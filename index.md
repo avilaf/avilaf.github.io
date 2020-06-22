@@ -25,7 +25,7 @@
 
 - [Laboratório de Genética e Biologia Molecular](https://evoecogenecons.wixsite.com/labbiomol/membros) 
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
-- [500 Mulheres Cientistas:](https://500womenscientists.org/portugues-nosso-compromisso) Justiça, Equidade, Diversidade e Inclusão
+- [500 Mulheres Cientistas:](https://500womenscientists.org/missao-visao) Justiça, Equidade, Diversidade e Inclusão
 
 ![](/assets/sapo_rosa.png) 
 

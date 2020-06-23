@@ -27,7 +27,13 @@
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
 - [500 Mulheres Cientistas:](https://500womenscientists.org/missao-visao) Justiça, Equidade, Diversidade e Inclusão
 
-![](/assets/sapo_rosa.png) [![ig](/assets/ig_p.png =100x20)](https://www.instagram.com/fernandar.avila/)	[![twitter](/assets/twitter_p.pngb=100x20)](https://twitter.com/fernandar_avila)	
+![](/assets/sapo_rosa.png) 
+
+<img src="Assets/icon.png" width="200">
+
+<a href="//www.instagram.com/fernandar.avila/"> <img src="assets/ig_p.png =100x20" width="200" class="media-object  img-responsive img-thumbnail"></a>
+
+[![ig](/assets/ig_p.png =100x20)](https://www.instagram.com/fernandar.avila/)	[![twitter](/assets/twitter_p.pngb=100x20)](https://twitter.com/fernandar_avila)	
 
 
 

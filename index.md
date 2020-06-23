@@ -29,13 +29,5 @@
 
 ![](/assets/sapo_rosa.png) 
 
-<img src="Assets/icon.png" width="200">
-
-<a href="//www.instagram.com/fernandar.avila/"> <img src="assets/ig_p.png =100x20" width="200" class="media-object  img-responsive img-thumbnail"></a>
-
-[![ig](/assets/ig_p.png =100x20)](https://www.instagram.com/fernandar.avila/)	[![twitter](/assets/twitter_p.pngb=100x20)](https://twitter.com/fernandar_avila)	
-
-
-
 
 

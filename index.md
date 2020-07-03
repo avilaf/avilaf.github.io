@@ -21,7 +21,7 @@
 - [ResearchGate](https://www.researchgate.net/profile/Fernanda_Rodrigues_De_Avila)
 - [ORCID](https://orcid.org/0000-0002-1572-2722)
 - [Google Scholar](https://scholar.google.com.br/citations?user=sgL10A8AAAAJ&hl=pt-BR&oi=sra)
-- [Request a Woman in STEMM](https://request500womenscientists.org/profile/14140)
+- [Encontre uma pesquisadora em STEMM](https://request500womenscientists.org/profile/14140)
 
 - [Laboratório de Genética e Biologia Molecular](https://evoecogenecons.wixsite.com/labbiomol/membros) 
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 

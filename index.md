@@ -26,7 +26,7 @@
 - [Laboratório de Genética e Biologia Molecular](https://evoecogenecons.wixsite.com/labbiomol/membros) 
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
 - [500 Mulheres Cientistas:](https://500womenscientists.org/missao-visao) Justiça, Equidade, Diversidade e Inclusão
-
+- 500 Mulhelhes Cientistas Pod Porto Alegre: [Twitter](https://twitter.com/500wspoa) [Instagram](https://www.instagram.com/500wspoa/)
 ![](/assets/sapo_rosa.png) 
 
 

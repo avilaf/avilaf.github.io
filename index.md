@@ -11,7 +11,6 @@
 
 <p align="justify">Também enho interesse também em extensão e popularização da ciência: Atualmente faço parte das <span style="color: IndianRed">500 Mulheres Cientistas de Porto Alegre </span>, onde atuo nos grupos de trabalho de formação (voltado para divulgação, na educação básica, das contribuições científicas de mulheres) e de comunicação (responsável pelas redes sociais do grupo). </p>
 
-<p align="justify"> I am also interested in science communication: I am currently part of <span style="color: IndianRed"> 500 Women Scientists from Porto Alegre </span>, working in two working groups: training (focused on for dissemination, at school, of the scientific contributions of women) and of communication (responsible for the group's social networks). </p>
 
 <span style="color: IndianRed">Contato: </span> *<fernandar.avila@gmail.com>*
 

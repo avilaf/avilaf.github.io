@@ -9,6 +9,8 @@
 ![](/assets/line4.png)
 <p align="justify">Tenho experiência com trabalhos em Ecologia e História Natural de anfíbios e répteis do sul do Brasil. Recentemente tenho voltado meu trabalho para questões de Biogeografia Histórica e Ecologia Evolutiva. Durante meu doutorado, tenho me interessado em usar os anfíbios como modelos, e a biologia molecular como ferramenta, para entender as dinâmicas temporais da paisagem no Planalto das Araucárias.</p>
 
+<p align="justify">Também enho interesse também em extensão e popularização da ciência: Atualmente faço parte das <span style="color: IndianRed">500 Mulheres Cientistas de Porto Alegre </span>, onde atuo nos grupos de trabalho de formação (voltado para divulgação, na educação básica, das contribuições científicas de mulheres) e de comunicação (responsável pelas redes sociais do grupo). </p>
+
 <span style="color: IndianRed">Contato: </span> *<fernandar.avila@gmail.com>*
 
 

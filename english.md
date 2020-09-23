@@ -10,6 +10,7 @@
 <p align="justify"> I am also interested in science communication: I am currently part of the <span style="color: IndianRed"> 500 Women Scientists from Porto Alegre</span>,  working for dissemination of the women's scientific contributions. </p>
 
 <span style="color: IndianRed">Contact: </span> *<fernandar.avila@gmail.com>*
+[*Twitter*](https://twitter.com/fernandar_avila) and [*Instagram*](https://www.instagram.com/fernandar.avila)
 
 
 

@@ -12,8 +12,8 @@
 <p align="justify">Também procuro me dedicar a extensão e popularização da ciência: Atualmente faço parte das <span style="color: IndianRed">500 Mulheres Cientistas de Porto Alegre</span>, onde atuo nos grupos de trabalho de formação (voltado para divulgação, na educação básica, das contribuições científicas de mulheres) e de comunicação (responsável pelos perfis do grupo nas redes sociais). </p>
 
 
-<span style="color: IndianRed">Contato: </span> *<fernandar.avila@gmail.com>*
-<span style="color: IndianRed">[*Twitter*](https://twitter.com/fernandar_avila)</span> e <span style="color: IndianRed">[*Instagram*](https://www.instagram.com/fernandar.avila)</span>
+<p><span style="color: IndianRed">Contato: </span> *<fernandar.avila@gmail.com>* </p>
+<p><span style="color: IndianRed">[*Twitter*]</span>(https://twitter.com/fernandar_avila) e <span style="color: IndianRed">[*Instagram*](https://www.instagram.com/fernandar.avila)</span> </p>
 
 
 ![](/assets/smallspace.png)

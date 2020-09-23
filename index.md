@@ -13,7 +13,7 @@
 
 
 <span style="color: IndianRed">Contato: </span> *<fernandar.avila@gmail.com>*
-
+<span style="color: IndianRed">[*Twitter*](https://twitter.com/fernandar_avila)</span> e <span style="color: IndianRed">[*Instagram*](https://www.instagram.com/fernandar.avila)</span>
 
 
 ![](/assets/smallspace.png)

@@ -12,3 +12,4 @@ Apresentado por: Fernanda Rodrigues de Avila
 Link da página do evento: *<https://www.herpetocapixaba.com.br/herpetorama2020>*
 
 <span style="color: IndianRed">Link do vídeo: *<https://youtu.be/W57K2so5uGQ>* </span>
+![](/assets/sapo_rosa.png) 

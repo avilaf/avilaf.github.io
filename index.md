@@ -26,7 +26,7 @@
 - [ORCID](https://orcid.org/0000-0002-1572-2722)
 - [Google Scholar](https://scholar.google.com.br/citations?user=sgL10A8AAAAJ&hl=pt-BR&oi=sra)
 - [Encontre uma pesquisadora em STEMM](https://request500womenscientists.org/profile/14140)
-- [Apresentações](https://avilaf.github.io/divulgacao)
+- [Palestras e Divulgações](https://avilaf.github.io/divulgacao)
 
 - [Laboratório de Genética e Biologia Molecular](https://evoecogenecons.wixsite.com/labbiomol/membros) 
 - [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 

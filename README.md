@@ -9,7 +9,7 @@ Interessada em anfíbios:frog:, biogeografia:earth_americas:, araucárias:evergr
 
 Essa é a minha página pessoal, que providenciei para reunir as minhas infromações acadêmicas e treinar/aprender um pouco de programação.
 
-:black_medium_square:A página:
+
 Aqui :arrow_right: [https://avilaf.github.io](https://avilaf.github.io)
 
 
@@ -20,7 +20,7 @@ Intrested in frogs:frog:, biogeography:earth_americas:, araucaria trees:evergree
 
 This is my personal page, to put togueter my academic information ans also learn/train coding.
 
-:black_medium_square:The page:
+
 Here :arrow_right: [https://avilaf.github.io/en.html](https://avilaf.github.io/en.html)
 
 

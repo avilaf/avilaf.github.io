@@ -14,7 +14,7 @@ Aqui :arrow_right: [https://avilaf.github.io](https://avilaf.github.io)
 
 
 # en
-Hi, I am Fernanda R. de Avila, PhD student in the [PPG Biologia Unisinos](http://www.unisinos.br/mestrado-e-doutorado/biologia/presencial/sao-leopoldo).
+Hi, I am Fernanda R. de Avila, PhD student in the [Unisinos Biology Department](http://www.unisinos.br/mestrado-e-doutorado/biologia/presencial/sao-leopoldo).
 
 Intrested in frogs:frog:, biogeography:earth_americas:, araucaria trees:evergreen_tree: and women in science :cherry_blossom::microscope:. 
 

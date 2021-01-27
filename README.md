@@ -18,7 +18,7 @@ Hi, I am Fernanda R. de Avila, PhD student in the [PPG Biologia Unisinos](http:/
 
 Intrested in frogs:frog:, biogeography:earth_americas:, araucaria trees:evergreen_tree: and women in science :cherry_blossom::microscope:. 
 
-This is my personal page, to put togueter my academic information ans also learn/train coding.
+This is my personal page, to put togueter my academic information and learn/train coding.
 
 
 Here :arrow_right: [https://avilaf.github.io/en.html](https://avilaf.github.io/en.html)

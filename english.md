@@ -5,7 +5,7 @@
 ![](/assets/smallspace.png)
 <p align="justify"> Biologist, PhD student in Biology: Diversity and Wildlife Management at Unisinos University.</p>
 ![](/assets/line4.png)
-<p align="justify">Most of my work is about Ecology and Natural History of amphibians and reptiles from southern Brazil. I have recently turned my work to questions of <span style="color: IndianRed">Historical Biogeography and Evolutionary Ecology</span>. During my PhD, I have been interested in using amphibians as models, and molecular biology as tool, to understand temporal landscape dynamics of the Planalto das Araucárias, southern Atlantic Forest.</p>
+<p align="justify">Most of my work is about Ecology and Natural History of amphibians and reptiles from southern Brazil. I have recently turned my work to questions of Historical Biogeography and Evolutionary Ecology. During my PhD, I have been interested in using amphibians and fruit flies as models to understand evolutionary landscape dynamics of Araucaria Forest. </p>
 
 <p align="justify"> I am also interested in science communication: I am currently part of the <span style="color: IndianRed"> 500 Women Scientists from Porto Alegre</span>,  working for dissemination of the women's scientific contributions. </p>
 

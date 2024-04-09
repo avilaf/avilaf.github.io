@@ -1,35 +1,35 @@
-[*Português*](https://avilaf.github.io/) 
+[*Página Inicial*](https://avilaf.github.io/) 
+[*Página Inicial*](https://avilaf.github.io/en.html) 
+
 <center>
- <font size="5"><span style="color: IndianRed"> Fernanda Rodrigues de Avila  </span> </font>
+#### <span style="color: IndianRed"> AGRADECIMENTOS DA TESE - Fernanda R. de Avila  
+Ou: 
+Como se faz uma doutora
+</span>
 </center>
-![](/assets/smallspace.png)
-<p align="justify"> Biologist, PhD student in Biology: Diversity and Wildlife Management at Unisinos University.</p>
-![](/assets/line4.png)
-<p align="justify">Most of my work is about Ecology and Natural History of amphibians and reptiles from southern Brazil. I have recently turned my work to questions of Historical Biogeography and Evolutionary Ecology. During my PhD, I have been interested in using amphibians and fruit flies as models to understand evolutionary landscape dynamics of Araucaria Forest. </p>
 
-<p align="justify"> I am also interested in science communication: I am currently part of the <span style="color: IndianRed"> 500 Women Scientists from Porto Alegre</span>,  working for dissemination of the women's scientific contributions. </p>
+ 
 
-<span style="color: IndianRed">Contact: </span> *<fernandar.avila@gmail.com>*
+<p align="justify"> Essa tese foi realizada na pandemia da Covid-19 e num país sob um governo militarizado de extrema direita. Mais do que sobreviver à tese, foi necessário cuidar de si e das pessoas à nossa volta. Acompanhamos também o fechamento do PPG, cortaram a luz do nosso Bacurau. Dito isso, se em condições normais de temperatura e pressão, as parcerias já são fundamentais para se fazer pesquisa, evidentemente os agradecimentos que aqui seguem são muito especiais. Desse modo é importante iniciar agradecendo às instituições que permitiram a execução dessa tese, mesmo em meio ao projeto de destruição executado pela horda conservadora que sequestrou o Brasil nos últimos anos. Agradeço à Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES, pela bolsa concedida e à Associação Nacional de Pós-graduandos - ANPG, pela luta no reajuste das bolsas, congeladas à 10 anos. Agradeço também ao Programa de Pós-Graduação em Biologia da Unisinos pelos recursos e pelo conhecimento proporcionado, passei nesse espaço bons dez anos aprendendo muito. Finalmente agradeço ao Instituto Brasileiro do Meio Ambiente e Recursos Renováveis - ICMBio/IBAMA por haver concedido as autorizações necessárias para que nossa pesquisa fosse possível.
+      Agradeço também ao corpo técnico do laboratório de Genética e Biologia Molecular: Natasha Malgarezi, Ma. Caroline Brukmann, Diego Muszinski e Irene Olkoski. Profissionais competentes e sempre disponíveis a colaborar com a pesquisa de todos. Ao professor Dr. Tozetti e ao Laboratório de Ecologia de Vertebrados Terrestres da Unisinos, agradeço pela confiança e pelo acesso irrestrito ao material da coleção. Obrigada também à Ma. Denise Schnorr, pela cordialidade no apoio à pesquisa ao acervo do Instituto Anchietano de Pesquisas. Também deixo um abraço e um agradecimento especial ao Dr. Patrick Colombo (Xueize), pela disponibilidade e solicitude em diversos momentos.
+Revisando as figuras da tese, lembrei de um agradecimento importante e simbólico. Ao meu amigo e professor de geografia Anderson Goulart, ainda hoje cada exercício de cartografia digital recorda as aulas traçando mapas e escalas em papel vegetal. Aprendi didática rogeriana na prática e que fazer as perguntas certas é mais importante do que saber as respostas das provas. Do jardim de infância até aqui, passei pelas mãos de professoras e professores excepcionais. Desejo que estejam contemplados neste agradecimento simbólico aos profissionais dedicados da educação básica pública.
+      Ademais, tenho em sorte tudo que me falta em juízo, e o acaso colocou no meu caminho amizades que me apoiaram e riram comigo nos bons e maus momentos. Uma rede de apoio predominantemente feminina, que lembra que no final do dia o que nos resta é termos umas às outras. Sendo assim, mais do que compartilharmos essa aventura que é fazer pesquisa, ver surgir esses “mutualismos” em “ambientes extremos” torna tudo muito mais leve. Obrigada mulheres cientistas pelo espaço de acolhimento e ação: Giovana Dantas, Júlia Fialho, Ana Porto e Violeta Santiago. Que bom que pude contar com a generosidade de vocês gurias. Vamos terminar aquele artigo.
+      Muito obrigada ainda aos amigos/colegas de Laboratório de Genética e Biologia Molecular. Compartilhamos a bancada, as frustrações e as conquistas um experimento após o outro, trabalhando sério, mas dando risada. Agradeço especialmente à querida Dra. Giuly Iturralde. Impossível imaginar os longos dias, semanas, meses de bancada sem essa companhia. Sempre disponível para revisar etapas de mais um experimento e para dar e receber sugestões. Obrigada pela amizade e por apresentar a esta sapóloga o interessante mundo das planárias.
+      No insetário houve também muito trabalho, que acabou ficando fora do documento final. Até mesmo a Ma. Marcela Marmitt, representando o time da microbiologia, esteve engajada na limpeza da vidraria. Agradeço sobretudo à querida Gabriele Steyer, minha “moscóloga” favorita, incansável jovem pesquisadora. Obrigada pela paciência em orientar essa doutoranda no cuidado com as drosófilas, espero ter sido uma boa aluna. Obrigada também a Ana Crhystina e Alice Diedrich, parceiras maravilhosas nesse trabalho de manter as moscas vivas. E finalmente ao queridíssimo Fabrício Stalter, pela dedicação e, não menos importante, por ter presenteado essa doutoranda com sua primeira caixa de abelhas Jataí (a mulher admirando seus bichinhos não quer guerra com ninguém). 
+      Às “minhas” ICs, que tive a alegria e o prazer de (des)orientar. Após algum tempo de bancada e bioinformática é muito fácil esquecer o encantamento pelos incríveis processos cotidianos, faz muito bem recomeçar, recobrar o ânimo a cada novo treinamento. Agradeço à querida Amandinha Silva, pelos sorrisos, pela curiosidade e pelo interesse nos sapinhos e na biologia molecular. Obrigada também à Marcela Trindade (já quase mestra!), e à sua “cara de pau de madeira de lei”. Sigo muito orgulhosa em fazer parte da tua trajetória, acompanhar teu progresso e saber que ainda hoje seguimos trabalhando juntas em novos projetos. Obrigada pelas gargalhadas, pela disposição, pela parceria e por não ter desistido dessa mulher que só sabe falar em hipótese e análises.
+      À Ma. Ana Emília Schneider, obrigada por ter colocado a mão na massa, pelas muitas linhas planilhadas, sem as quais essa tese teria demorado muito mais para ser finalizada. Na primeira semana que nos vimos tive certeza de que não íamos conversar muito. Felizmente quebrei a cara e hoje essa é a amiga que não desiste de me convidar para sair, que faz a leitura entusiasmada dos meus rascunhos e que minha família a convida para as festas. Obrigada Nimília.
+      Um doutorado leva bastante tempo, tempo suficiente para que os ciclos de amor e desilusão com a pesquisa se intercalem. Agora no final desta prova de resistência, recordo com carinho do conselho que recebi pelos corredores do lab no primeiro semestre: “Amiga, vai com calma. Tu acabou de sair dos cem metros rasos e vai correr uma maratona”. Obrigada Helô, (Dra. Heloísa Allgayer), pelas trocas de ideias, por todo o apoio e pelo brilhantismo em pensar e fazer ciência de forma tão singular. 
+      Ao meu orientador, paraninfo e “Malvado Favorito” professor Dr. Victor Hugo Valiati, obrigada por tudo: pelo respeito, confiança e parceria irrestrita desses últimos anos. Nessa caminhada, o geneticista Victor tornou-se um herpetólogo honorário, enfrentando banhados e mosquitos sem cara feia. Agradeço principalmente pelo entusiasmo compartilhado com as perguntas biológicas, pelas longas conversas rabiscando hipóteses, experimentos e discussões. Que bom que escolhi um orientador exigente. Depois de tanto tempo trabalhando juntos, quando crescer ainda quero ser igual ao Victor. Ademais, colocando em perspectiva nossa parceria, lembro-me que li recentemente Caetano Veloso referindo-se à própria carreira, onde dizia que entrara em muitas “canoas furadas”, mas acreditava que sabia “andar sobre as águas”. Me parece que nós aqui também embarcamos em algumas dessas canoas, resta saber se conseguimos sair da água. 
+      Preciso agradecer também à minha grande família, caótica, barulhenta, amorosa e generosa. Nos últimos tempos vivemos momentos muito intensos, tivemos muito medo, mas sobrevivemos todos, juntos ainda. Desculpem pelas muitas ausências, espero que a qualidade das presenças tenha compensado de alguma forma. Obrigada pela generosidade comigo e com as minhas amizades. O mundo é um lugar menos assustador porque estamos juntos nessa. Agradeço especialmente à minha mãe, Ione Silva, a pessoa mais corajosa que já conheci, que me ensina todos os dias a ser insubmissa e amorosa. E meu pai, Fernando Avila, obrigada pela confiança e por compartilhar desde sempre o encantamento com a natureza em todas as suas formas.
+      Agradeço aos colaboradores, dessa pesquisa e de tantas ouras, e à banca examinadora por compartilharem seu tempo e conhecimento enriquecendo nosso trabalho.
+      Antes de finalizar, agradeço a quem nesse momento lê esse documento. Obrigada pelo tempo e pela atenção a esse tema que me é tão caro. Sem o interlocutor essa tese seria um amontoado de símbolos pretos sobre um fundo branco, ela só existe quando encontra outros pensamentos. Nesse encontro de universos, o meu e o seu, talvez consigamos inserir mais um fio na intrincada trama que forma as Ciências Biológicas. É sempre muito bom ser “ouvida”. Seja bem-vinda, ou bem-vindo, sinta-se à vontade e não repare a bagunça.
 
-[*Twitter*](https://twitter.com/fernandar_avila) and [*Instagram*](https://www.instagram.com/fernandar.avila)
 
 
 
-![](/assets/smallspace.png)
 
-#### <span style="color: IndianRed"> Informations:  </span>
+</p>
 
-- [CV Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869341A1&idiomaExibicao=2)
-- [ResearchGate](https://www.researchgate.net/profile/Fernanda_Rodrigues_De_Avila)
-- [ORCID](https://orcid.org/0000-0002-1572-2722)
-- [Google Scholar](https://scholar.google.com.br/citations?user=sgL10A8AAAAJ&hl=pt-BR&oi=sra)
-- [Request a Woman in STEMM](https://request500womenscientists.org/profile/14140)
-
-- [Laboratório de Genética e Biologia Molecular](https://evoecogenecons.wixsite.com/labbiomol/membros) 
-- [Laboratório de Ecologia de Vertebrados Terrestres](https://herpetologiaunisin.wixsite.com/levert/doutorandos) 
-- [500 Women Scientists:](https://500womenscientists.org/mission-and-vision) Justice, Equity, Diversity and Inclusion
-- 500 Women Scientists Pod Porto Alegre: [Twitter](https://twitter.com/500wspoa) and [Instagram](https://www.instagram.com/500wspoa/)
-![](/assets/sapo_rosa.png) 
 
 
 

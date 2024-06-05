@@ -5,7 +5,7 @@
 
 Olá, sou Dra. Fernanda R. de Avila.
 
-Interessada em anfíbios:frog:, biogeografia:earth_americas:, araucárias:evergreen_tree: e diversidade na ciência :cherry_blossom::microscope:. 
+Interessada em anfíbios 🐸, biogeografia 🌎, araucárias🌲, Pampas 🪶 e diversidade na ciência 🫱🏻‍🫲🏾♀️🔬. 
 
 Essa é a minha página pessoal, que providenciei para reunir as minhas infromações acadêmicas. 
 
@@ -18,7 +18,7 @@ Você pode acessar a página aqui :arrow_right: [https://avilaf.github.io](https
 # en
 Hi, I am  Dr. Fernanda R. de Avila. 
 
-A Brazilian biologist intrested in frogs:frog:, biogeography:earth_americas:, araucaria trees:evergreen_tree: and diversity in science :cherry_blossom::microscope:. 
+A Brazilian biologist intrested in frogs 🐸, biogeography 🌎, araucaria trees 🌲, Pampas 🪶 and diversity in science 🫱🏻‍🫲🏾♀️🔬. 
 
 This is my personal page, where I can put togueter my academic information. 
 

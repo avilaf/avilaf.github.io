@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width">
+<meta property="og:title" content="Mentoria de introdução às possibilidades do pacote ggplot2" />
+
+
+
+
+<meta name="author" content="Dra. Fernanda Rodrigues de Avila" />
+
+<meta name="date" content="2024-07-04" />
+
+<meta name="description" content="Mentoria de introdução às possibilidades do pacote ggplot2">
+
+<script id="pandoc-meta" type="application/json">
+{"author":"Dra. Fernanda Rodrigues de Avila","date":"2024-07-04","knit":"pagedown::chrome_print","lof":false,"lot":false,"newpage_html_class":"page-break-after","output":{"pagedown::html_paged":{"self_contained":false,"toc":true}},"title":"Mentoria de introdução às possibilidades do pacote ggplot2"}
+</script>
+
+<title>Mentoria de introdução às possibilidades do pacote ggplot2</title>
+
+
+<link href="introducao_ggplot_files/paged-0.20/css/default-fonts.css" rel="stylesheet" />
+<link href="introducao_ggplot_files/paged-0.20/css/default-page.css" rel="stylesheet" />
+<link href="introducao_ggplot_files/paged-0.20/css/default.css" rel="stylesheet" />
+<script src="introducao_ggplot_files/paged-0.20/js/config.js"></script>
+<script src="introducao_ggplot_files/paged-0.20/js/paged.js"></script>
+<script src="introducao_ggplot_files/paged-0.20/js/hooks.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="running-h1-title"></div>
+
+<div class="running-h2-title"></div>
+
+
+
+<div class="front-page">
+<div id="header" class="title-page">
+<h1 class="title">Mentoria de introdução às possibilidades do pacote ggplot2</h1>
+<h2 class="author">Dra. Fernanda Rodrigues de Avila</h2>
+<h2 class="date">2024-07-04</h2>
+</div>
+</div>
+
+<div class="front-matter-container">
+<div id="TOC" class="level1 toc front-matter">
+<ul>
+<li><a href="#sobre-o-ggplot2" id="toc-sobre-o-ggplot2"><span class="toc-section-number">1</span> Sobre o ggplot2:</a>
+<ul>
+<li><a href="#a-mentoria" id="toc-a-mentoria"><span class="toc-section-number">1.1</span> A mentoria:</a></li>
+</ul></li>
+<li><a href="#preparação" id="toc-preparação"><span class="toc-section-number">2</span> Preparação:</a>
+<ul>
+<li><a href="#instalando-os-pacotes" id="toc-instalando-os-pacotes"><span class="toc-section-number">2.1</span> Instalando os pacotes:</a></li>
+</ul></li>
+<li><a href="#carregando-os-dados" id="toc-carregando-os-dados"><span class="toc-section-number">3</span> Carregando os dados:</a></li>
+<li><a href="#elementos-básicos-ggplot2" id="toc-elementos-básicos-ggplot2"><span class="toc-section-number">4</span> Elementos básicos <em>ggplot2</em>:</a>
+<ul>
+<li><a href="#vamos-trabalhar-com-alguns-elementos-do-ggplot2" id="toc-vamos-trabalhar-com-alguns-elementos-do-ggplot2"><span class="toc-section-number">4.1</span> Vamos trabalhar com alguns elementos do <em>ggplot2</em>:</a></li>
+</ul></li>
+<li><a href="#gráficos-simples" id="toc-gráficos-simples"><span class="toc-section-number">5</span> Gráficos simples:</a></li>
+<li><a href="#alterações-no-visual" id="toc-alterações-no-visual"><span class="toc-section-number">6</span> Alterações no visual:</a>
+<ul>
+<li><a href="#outras-opções-de-cores-e-temas" id="toc-outras-opções-de-cores-e-temas"><span class="toc-section-number">6.1</span> Outras opções de cores e temas:</a></li>
+</ul></li>
+<li><a href="#elementps-textuais" id="toc-elementps-textuais"><span class="toc-section-number">7</span> Elementps textuais:</a>
+<ul>
+<li><a href="#títulos-dos-eixos" id="toc-títulos-dos-eixos"><span class="toc-section-number">7.1</span> Títulos dos eixos:</a></li>
+<li><a href="#sobreescritos" id="toc-sobreescritos"><span class="toc-section-number">7.2</span> Sobreescritos (^):</a></li>
+<li><a href="#estética-dos-títulos-dos-eixos" id="toc-estética-dos-títulos-dos-eixos"><span class="toc-section-number">7.3</span> Estética dos títulos dos eixos:</a>
+<ul>
+<li><a href="#quando-os-dois-títulos-x-e-y-são-iguais" id="toc-quando-os-dois-títulos-x-e-y-são-iguais"><span class="toc-section-number">7.3.1</span> Quando os dois títulos (x e y) são iguais:</a></li>
+<li><a href="#formatação-independente-dos-títuos-dos-eixos" id="toc-formatação-independente-dos-títuos-dos-eixos"><span class="toc-section-number">7.3.2</span> Formatação independente dos títuos dos eixos:</a></li>
+<li><a href="#formatação-básica-dos-dois-eixos-com-alteraçõeses-específicas-em-x-e-y" id="toc-formatação-básica-dos-dois-eixos-com-alteraçõeses-específicas-em-x-e-y"><span class="toc-section-number">7.3.3</span> Formatação básica dos dois eixos com alteraçõeses específicas em x e y:</a></li>
+<li><a href="#alterando-estética-do-texto-dos-eixos" id="toc-alterando-estética-do-texto-dos-eixos"><span class="toc-section-number">7.3.4</span> Alterando estética do texto dos eixos:</a></li>
+<li><a href="#rotacionar-o-texto-do-eixo" id="toc-rotacionar-o-texto-do-eixo"><span class="toc-section-number">7.3.5</span> Rotacionar o texto do eixo:</a></li>
+<li><a href="#remover-os-títulos-dos-eixos" id="toc-remover-os-títulos-dos-eixos"><span class="toc-section-number">7.3.6</span> Remover os títulos dos eixos:</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#ajustes-de-espaçamento-e-visualização" id="toc-ajustes-de-espaçamento-e-visualização"><span class="toc-section-number">8</span> Ajustes de espaçamento e visualização:</a>
+<ul>
+<li><a href="#espaçamento-entre-eixos-e-títulos-dos-eixos" id="toc-espaçamento-entre-eixos-e-títulos-dos-eixos"><span class="toc-section-number">8.1</span> Espaçamento entre eixos e títulos dos eixos:</a>
+<ul>
+<li><a href="#ajuste-da-margem" id="toc-ajuste-da-margem"><span class="toc-section-number">8.1.1</span> Ajuste da margem:</a></li>
+<li><a href="#limitar-a-amplitude-do-eixo" id="toc-limitar-a-amplitude-do-eixo"><span class="toc-section-number">8.1.2</span> Limitar a amplitude do eixo:</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#títulos" id="toc-títulos"><span class="toc-section-number">9</span> Títulos:</a>
+<ul>
+<li><a href="#adicionar-um-título" id="toc-adicionar-um-título"><span class="toc-section-number">9.1</span> Adicionar um título:</a></li>
+<li><a href="#ajustar-propriedades-do-título-go-gráfico" id="toc-ajustar-propriedades-do-título-go-gráfico"><span class="toc-section-number">9.2</span> Ajustar propriedades do título go gráfico:</a></li>
+<li><a href="#ajustar-posição-do-título" id="toc-ajustar-posição-do-título"><span class="toc-section-number">9.3</span> Ajustar posição do título:</a></li>
+<li><a href="#mudando-o-espaço-e-quebrando-linhas-no-título" id="toc-mudando-o-espaço-e-quebrando-linhas-no-título"><span class="toc-section-number">9.4</span> Mudando o espaço e quebrando linhas no título:</a></li>
+</ul></li>
+<li><a href="#legendas" id="toc-legendas"><span class="toc-section-number">10</span> Legendas:</a>
+<ul>
+<li><a href="#atribuir-legenda" id="toc-atribuir-legenda"><span class="toc-section-number">10.1</span> Atribuir legenda:</a></li>
+<li><a href="#remover-legenda" id="toc-remover-legenda"><span class="toc-section-number">10.2</span> Remover legenda:</a></li>
+<li><a href="#remover-apenas-uma-entrada-de-legenda" id="toc-remover-apenas-uma-entrada-de-legenda"><span class="toc-section-number">10.3</span> Remover apenas uma entrada de legenda:</a></li>
+<li><a href="#remover-o-título-da-legenda" id="toc-remover-o-título-da-legenda"><span class="toc-section-number">10.4</span> Remover o título da legenda:</a></li>
+<li><a href="#posição-da-legenda" id="toc-posição-da-legenda"><span class="toc-section-number">10.5</span> Posição da legenda:</a></li>
+<li><a href="#direção-da-legenda" id="toc-direção-da-legenda"><span class="toc-section-number">10.6</span> Direção da legenda:</a></li>
+<li><a href="#estilo-do-título-da-legenda" id="toc-estilo-do-título-da-legenda"><span class="toc-section-number">10.7</span> Estilo do título da legenda:</a></li>
+<li><a href="#alterar-a-ordem-dos-itens-da-legenda" id="toc-alterar-a-ordem-dos-itens-da-legenda"><span class="toc-section-number">10.8</span> Alterar a ordem dos itens da legenda:</a></li>
+<li><a href="#alterar-os-nomes-dos-níveis-da-legenda" id="toc-alterar-os-nomes-dos-níveis-da-legenda"><span class="toc-section-number">10.9</span> Alterar os nomes dos níveis da legenda:</a></li>
+<li><a href="#alterar-o-preenchimento-dos-itens-da-legenda" id="toc-alterar-o-preenchimento-dos-itens-da-legenda"><span class="toc-section-number">10.10</span> Alterar o preenchimento dos itens da legenda:</a></li>
+<li><a href="#outros-estilos-de-legenda-gradiente" id="toc-outros-estilos-de-legenda-gradiente"><span class="toc-section-number">10.11</span> Outros estilos de legenda (gradiente):</a></li>
+</ul></li>
+<li><a href="#planos-de-fundo-e-linhas" id="toc-planos-de-fundo-e-linhas"><span class="toc-section-number">11</span> Planos de fundo e linhas:</a>
+<ul>
+<li><a href="#alterando-a-borda" id="toc-alterando-a-borda"><span class="toc-section-number">11.1</span> Alterando a borda</a></li>
+<li><a href="#alterar-linhas" id="toc-alterar-linhas"><span class="toc-section-number">11.2</span> Alterar linhas:</a></li>
+<li><a href="#alterar-a-cor-do-fundo" id="toc-alterar-a-cor-do-fundo"><span class="toc-section-number">11.3</span> Alterar a cor do fundo:</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div class="main">
+<div id="sobre-o-ggplot2" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Sobre o ggplot2:</h1>
+<ul>
+<li><p>O [ggplot2] (<a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a>) é um pacote para a linguagem de programação estatística R</p></li>
+<li><p>É uma ferramenta cheia de funcionalidades, construída para visualização de dados</p></li>
+</ul>
+<div id="a-mentoria" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> A mentoria:</h2>
+<ul>
+<li><p>Esse material foi concebido como apoio didático à <em>“Mentoria de ggplot”</em> ministrada ao Pod Porto Alegre das 500 MUlhes Cientistas no ano de 2021</p></li>
+<li><p>A ideia é que usuários iniciantes consigam produzir todos os gráficos</p></li>
+<li><p>Para a construção desse material foram adaptados os exemplos disponíveis em: [Simple Gantt charts in R with ggplot2 and Microsoft Excel - Cédric Scherer] (<a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/" class="uri">https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/</a>)</p></li>
+</ul>
+</div>
+</div>
+<div id="preparação" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Preparação:</h1>
+<div id="instalando-os-pacotes" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Instalando os pacotes:</h2>
+<ul>
+<li><p>O R é uma linguagem de programação muito poderosa e amplamente utilizada para análise de dados.</p></li>
+<li><p>Contudo, a maior parte de suas funcionalidades avançadas estão disponíveis através de <strong>pacotes</strong>.</p></li>
+<li><p>Os pacotes no R, como o <em>“ggplot2”</em>, são <strong>coleções de funções</strong>, <strong>dados</strong> e <strong>documentação</strong> que ampliam as capacidades básicas do R.</p></li>
+<li><p>Não é preciso baixar e instalar mais do que uma vez os pacotes no R. Contudo, cada vez que o R é reiniciado é preciso carregar os pacotes que serão utilizados nas análises.</p></li>
+</ul>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+<div id="carregando-os-dados" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Carregando os dados:</h1>
+<p>Nesse exemplo vamos usar os dados do Estudo Nacional de Morbidade e Mortalidade sobre Poluição do Ar dos Esyados Unidos (National Morbidity and Mortality Air Pollution Study - NMMAPS).</p>
+<p>Para fins didáticos os dados foram restringidos para Chicago entre os anos 1997 e 2000.</p>
+<p>A matriz está em fromato .csv e hospedada em um diretório online. Basta seguir o código para importar automaticamente.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>chic <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://avilaf.github.io/dados/chicago-nmmaps-custom.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Rows: 1461 Columns: 10
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (3): city, season, month
+## dbl  (6): temp, o3, dewpoint, pm10, yday, year
+## date (1): date
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># ao usar &quot;::namespace&quot; (não é necessério carregar o pacote)</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co"># é uma função interessante quando usamos mtos pacotes em um único script</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co"># ou um pacote é utilizado somente para uma função pontual</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">glimpse</span>(chic) <span class="co"># para transpor e visualizar os dados</span></span></code></pre></div>
+<pre><code>## Rows: 1,461
+## Columns: 10
+## $ city     &lt;chr&gt; &quot;chic&quot;, &quot;chic&quot;, &quot;chic&quot;, &quot;chic&quot;, &quot;chic&quot;, &quot;chic&quot;, &quot;chic&quot;, &quot;chic…
+## $ date     &lt;date&gt; 1997-01-01, 1997-01-02, 1997-01-03, 1997-01-04, 1997-01-05, …
+## $ temp     &lt;dbl&gt; 36.0, 45.0, 40.0, 51.5, 27.0, 17.0, 16.0, 19.0, 26.0, 16.0, 1…
+## $ o3       &lt;dbl&gt; 5.659256, 5.525417, 6.288548, 7.537758, 20.760798, 14.940874,…
+## $ dewpoint &lt;dbl&gt; 37.500, 47.250, 38.000, 45.500, 11.250, 5.750, 7.000, 17.750,…
+## $ pm10     &lt;dbl&gt; 13.052268, 41.948600, 27.041751, 25.072573, 15.343121, 9.3646…
+## $ season   &lt;chr&gt; &quot;Winter&quot;, &quot;Winter&quot;, &quot;Winter&quot;, &quot;Winter&quot;, &quot;Winter&quot;, &quot;Winter&quot;, &quot;…
+## $ yday     &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18…
+## $ month    &lt;chr&gt; &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;, &quot;Jan&quot;…
+## $ year     &lt;dbl&gt; 1997, 1997, 1997, 1997, 1997, 1997, 1997, 1997, 1997, 1997, 1…</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">class</span>(chic) <span class="co"># qual a classe do objeto &quot;chic&quot;?</span></span></code></pre></div>
+<pre><code>## [1] &quot;spec_tbl_df&quot; &quot;tbl_df&quot;      &quot;tbl&quot;         &quot;data.frame&quot;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">head</span>(chic, <span class="dv">10</span>) <span class="co"># visualizar o cabeçalho</span></span></code></pre></div>
+<pre><code>## # A tibble: 10 × 10
+##    city  date        temp    o3 dewpoint  pm10 season  yday month  year
+##    &lt;chr&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
+##  1 chic  1997-01-01  36    5.66    37.5  13.1  Winter     1 Jan    1997
+##  2 chic  1997-01-02  45    5.53    47.2  41.9  Winter     2 Jan    1997
+##  3 chic  1997-01-03  40    6.29    38    27.0  Winter     3 Jan    1997
+##  4 chic  1997-01-04  51.5  7.54    45.5  25.1  Winter     4 Jan    1997
+##  5 chic  1997-01-05  27   20.8     11.2  15.3  Winter     5 Jan    1997
+##  6 chic  1997-01-06  17   14.9      5.75  9.36 Winter     6 Jan    1997
+##  7 chic  1997-01-07  16   11.9      7    20.2  Winter     7 Jan    1997
+##  8 chic  1997-01-08  19    8.68    17.8  33.1  Winter     8 Jan    1997
+##  9 chic  1997-01-09  26   13.4     24    12.1  Winter     9 Jan    1997
+## 10 chic  1997-01-10  16   10.4      5.38 24.8  Winter    10 Jan    1997</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Note que temos muitos tipos de variáveis: categóricas, numéricas, discretas, contínuas...</span></span></code></pre></div>
+<p>Antes de continuar…</p>
+</div>
+<div id="elementos-básicos-ggplot2" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Elementos básicos <em>ggplot2</em>:</h1>
+<p>O <em>ggplot2</em> usa uma sintaxe de <strong>camadas</strong> que permite construir gráficos de forma incremental e modular. Cada camada adiciona um elemento ao gráfico, como os dados, mapeamentos estéticos (cores, tamanhos, etc.) e geometrias (pontos, barras, linhas, etc.). Isso torna o código mais legível e fácil de modificar.</p>
+<div id="vamos-trabalhar-com-alguns-elementos-do-ggplot2" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Vamos trabalhar com alguns elementos do <em>ggplot2</em>:</h2>
+<p>1 - Data: Os <em>dados brutos</em> que você deseja plotar.</p>
+<p>2 - Geometries ‘geom_’: As <em>formas</em> geométricas que representarão os dados.</p>
+<p>3 - Aesthetics ‘aes()’: <em>Estética</em> dos objetos geométricos e estatísticos, como posição, cor, tamanho, forma e transparência</p>
+<p>4 - Scales ‘scale_’: Relacionar os <em>dados</em> com as <em>dimensões estéticas</em>, como intervalo de dados para largura do gráfico ou valores de fator para cores.</p>
+<p>5 - Statistical transformations ‘stat_’: Resumir <em>estatisticamente</em> os dados, como calcular quantis, curvas ajustadas e somas.</p>
+<p>6 - Coordinate system ‘coord_’: Transformação usada para <em>mapear coordenadas</em> de dados no espaço de plotagem de dados.</p>
+<p>7 - Facets ‘facet_’: A <em>disposição</em> dos dados em uma grade de gráficos.</p>
+<p>8 - Visual themes ‘theme()’: Os <em>padrões visuais</em> gerais de um gráfico, como plano de fundo, grades, eixos, fonte padrão, tamanhos e cores.</p>
+</div>
+</div>
+<div id="gráficos-simples" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Gráficos simples:</h1>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># o primeiro passo é definir o conjunto de dados (data) e os eixos</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="co"># na função a seguir temos os dados + argumento &#39;aes&#39; posisicionais (x e y)</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> chic, </span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, </span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>           <span class="at">y =</span> temp))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+Note que não foi definida uma camada com a plotagem dos dados propriamente ditos.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># também é possível atribuir a plotagem a um ggobejto (&#39;g&#39;&lt;-)</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>(g <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp))) <span class="co"># base</span></span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># e usar esse objeto para acrescentar camadas na plotagem:</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="co"># gráfico de dispersão de pontos</span></span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="co"># gráfico de linhas</span></span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-4-3.png" width="672" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="co"># linhas e pontos</span></span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-4-4.png" width="672" /></p>
+</div>
+<div id="alterações-no-visual" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Alterações no visual:</h1>
+<p>Podemos fazer algumas edições estéticas na propriedade “geom”, como alterar cores e formas.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># para alterar as cores:</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>, </span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>               <span class="at">shape =</span> <span class="st">&quot;diamond&quot;</span>, </span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># Para mais opções decores: </span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="co"># http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a><span class="co"># paletas de cores: RColorBrewer::display.brewer.all()</span></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a><span class="co"># RColorBrewer::brewer.pal(n = 3, name = &quot;Set1&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co"># com sobreposição de camadas é só manter o padrão:</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a>               <span class="at">shape =</span> <span class="st">&quot;diamond&quot;</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>, </span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, </span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a>            <span class="at">size =</span> .<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Ajustar o tema também altera o visual do gráfico. Existem muitas opções de temas disponóveis.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co"># ajustar o tema para bw</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div id="outras-opções-de-cores-e-temas" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Outras opções de cores e temas:</h2>
+<p>Existem alguns pacotes com temas prontos, como <strong>“ggthemes”</strong> e <strong>“hrbrthemes”</strong>.</p>
+<p>Além disso, cada camada pode utilizar uma cor independente.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># mudar a cor das linhas e pontos:</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> o3)) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">&quot;gray&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;darkorange2&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Ozônio&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+</div>
+<div id="elementps-textuais" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Elementps textuais:</h1>
+<div id="títulos-dos-eixos" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Títulos dos eixos:</h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># Duas grafias diferentes para os mesmos resultados:</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Ano&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Temperatura (°F)&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+</div>
+<div id="sobreescritos" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Sobreescritos (^):</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, </span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>       <span class="at">y =</span> expression</span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a>       (<span class="fu">paste</span>(<span class="st">&quot;Temperatura (&quot;</span>, degree <span class="sc">~</span> F, <span class="st">&quot;)&quot;</span><span class="sc">^</span><span class="st">&quot;(O exemplo é Norte Americano, então não usamos graus Celsius!)&quot;</span>)))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="estética-dos-títulos-dos-eixos" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Estética dos títulos dos eixos:</h2>
+<div id="quando-os-dois-títulos-x-e-y-são-iguais" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Quando os dois títulos (x e y) são iguais:</h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># dentro de &#39;theme()&#39;</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="co"># modificar o elemento &#39;axis.title = &#39; ou &#39;axis.title.x&#39; e &#39;axis.title.y&#39;</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="co"># dentro de &#39;element_text = &#39;:</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="co"># size</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co"># color</span></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co"># face (bol, italic, bold.italic)</span></span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>,</span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a>                                  <span class="at">face =</span> <span class="st">&quot;italic&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="formatação-independente-dos-títuos-dos-eixos" class="section level3" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Formatação independente dos títuos dos eixos:</h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;sienna&quot;</span>, <span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;orangered&quot;</span>, <span class="at">size =</span> <span class="dv">15</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="formatação-básica-dos-dois-eixos-com-alteraçõeses-específicas-em-x-e-y" class="section level3" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Formatação básica dos dois eixos com alteraçõeses específicas em x e y:</h3>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># (&#39;axis.title = &#39; + &#39;axis.title.y&#39;)</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;sienna&quot;</span>, <span class="at">size =</span> <span class="dv">15</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold.italic&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="alterando-estética-do-texto-dos-eixos" class="section level3" number="7.3.4">
+<h3><span class="header-section-number">7.3.4</span> Alterando estética do texto dos eixos:</h3>
+<p>Esta parte é semelhante ao tópico anterior, mas com o argumento ‘axis.text’ ou ‘axis.text.x’ e’axis.text.y’</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (ºF)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;dodgerblue&quot;</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;italic&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="rotacionar-o-texto-do-eixo" class="section level3" number="7.3.5">
+<h3><span class="header-section-number">7.3.5</span> Rotacionar o texto do eixo:</h3>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="co"># &#39;angle&quot; dentro de &#39;theme(axis.text = (anlge = ))&#39;</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">50</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">12</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="remover-os-títulos-dos-eixos" class="section level3" number="7.3.6">
+<h3><span class="header-section-number">7.3.6</span> Remover os títulos dos eixos:</h3>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="co"># argumento labs()</span></span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb30-5"><a href="#cb30-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="co"># Observe que NULL remove o elemento (similarmente a element_blank()) enquanto aspas vazias &quot;&quot; manterão o espaçamento para o título do eixo e simplesmente não imprimirão nada.</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="ajustes-de-espaçamento-e-visualização" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Ajustes de espaçamento e visualização:</h1>
+<div id="espaçamento-entre-eixos-e-títulos-dos-eixos" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Espaçamento entre eixos e títulos dos eixos:</h2>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># com a camada theme()</span></span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="co"># argumento vjust (alinhamento vertical)</span></span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb32-6"><a href="#cb32-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb32-7"><a href="#cb32-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">vjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb32-8"><a href="#cb32-8" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">vjust =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">15</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div id="ajuste-da-margem" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Ajuste da margem:</h3>
+<p>“top”, “right”, “bottom” e “left” são argumentos que podem ser usados na função “theme()” do pacote ggplot2 para controlar a posição dos títulos, rótulos e legendas em um gráfico. Especificamente:</p>
+<ul>
+<li>“top” define a posição do título principal do gráfico</li>
+<li>“right” controla a posição da legenda</li>
+<li>“bottom” posiciona os rótulos dos eixos X e Y</li>
+<li>“left” determina a posição dos títulos dos eixos</li>
+</ul>
+<p>Os argumentos são dispostos em ordem <em>top, right, bottom, left</em> ou seja: <em>margin(t, r, b, l)</em>. Para lembrar dessa sequência usamos a palavra <strong>t-r-oub-l-e</strong>.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">t =</span> <span class="dv">10</span>), <span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb33-5"><a href="#cb33-5" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">r =</span> <span class="dv">10</span>), <span class="at">size =</span> <span class="dv">15</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="limitar-a-amplitude-do-eixo" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Limitar a amplitude do eixo:</h3>
+<p>Com <em>subsetting</em></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="co"># &#39;subsetting&#39;: (realiza um subconjunto dos dados primeiro)</span></span>
+<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code></pre></div>
+<pre><code>## Warning: Removed 777 rows containing missing values or values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>Outra opção (<em>zooming</em>):</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="co"># zooming: (sem espaço)</span></span>
+<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb36-5"><a href="#cb36-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb36-6"><a href="#cb36-6" tabindex="-1"></a><span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Um exemplo com gráfico boxlot:</p>
+<p>Opção <em>subsetting</em></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="co"># zoom</span></span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(year), <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb37-5"><a href="#cb37-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb37-6"><a href="#cb37-6" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Outra opção (<em>zooming</em>):</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="co"># subset (recorta os dados antes da plotagem )</span></span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(year), <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb38-5"><a href="#cb38-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb38-6"><a href="#cb38-6" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code></pre></div>
+<pre><code>## Warning: Removed 777 rows containing non-finite outside the scale range
+## (`stat_boxplot()`).</code></pre>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="títulos" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Títulos:</h1>
+<div id="adicionar-um-título" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Adicionar um título:</h2>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>g <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb40-4"><a href="#cb40-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Temperaturas en Chicago&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>Para dadicionar mais argumentos use a função <em>labs()</em></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="co"># labs() Para adicionar mais argumentos:</span></span>
+<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a>g <span class="sc">+</span></span>
+<span id="cb41-4"><a href="#cb41-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb41-5"><a href="#cb41-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>,</span>
+<span id="cb41-6"><a href="#cb41-6" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Temperaturas em Chicago&quot;</span>,</span>
+<span id="cb41-7"><a href="#cb41-7" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Padrão sazonal de temperaturas diárias de 1997 a 2001&quot;</span>,</span>
+<span id="cb41-8"><a href="#cb41-8" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">&quot;Dados: NMMAPS&quot;</span>,</span>
+<span id="cb41-9"><a href="#cb41-9" tabindex="-1"></a>       <span class="at">tag =</span> <span class="st">&quot;Fig. 1&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+<div id="ajustar-propriedades-do-título-go-gráfico" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Ajustar propriedades do título go gráfico:</h2>
+<p>A função <em>theme()</em> funciona para:
+<em>plot.subtitle, plot.caption, plot.caption, legend.title, legend.text, and axis.title and axis.text</em></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a>g <span class="sc">+</span></span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>,</span>
+<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Temperaturas en Chicago&quot;</span>) <span class="sc">+</span></span>
+<span id="cb42-5"><a href="#cb42-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>,</span>
+<span id="cb42-6"><a href="#cb42-6" tabindex="-1"></a>                                  <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">0</span>),</span>
+<span id="cb42-7"><a href="#cb42-7" tabindex="-1"></a>                                  <span class="at">size =</span> <span class="dv">14</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+</div>
+<div id="ajustar-posição-do-título" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Ajustar posição do título:</h2>
+<p>Aqui usamos a função <em>hjust()</em></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="co"># hjust</span></span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb43-4"><a href="#cb43-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb43-5"><a href="#cb43-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb43-6"><a href="#cb43-6" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Temperaturas em Chicago&quot;</span>,</span>
+<span id="cb43-7"><a href="#cb43-7" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">&quot;Dados: NMMAPS&quot;</span>) <span class="sc">+</span></span>
+<span id="cb43-8"><a href="#cb43-8" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold.italic&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+<div id="mudando-o-espaço-e-quebrando-linhas-no-título" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Mudando o espaço e quebrando linhas no título:</h2>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperature (?F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Temperatures in Chicago</span><span class="sc">\n</span><span class="st">from 1997 to 2001&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-5"><a href="#cb44-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">lineheight =</span> .<span class="dv">8</span>, <span class="at">size =</span> <span class="dv">16</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+</div>
+</div>
+<div id="legendas" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Legendas:</h1>
+<div id="atribuir-legenda" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Atribuir legenda:</h2>
+<p>Uma opção para atribuir legendas é o argumento <em>color()</em></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="co">#  color = season</span></span>
+<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb45-5"><a href="#cb45-5" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb45-6"><a href="#cb45-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+</div>
+<div id="remover-legenda" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Remover legenda:</h2>
+<p>Pode ser realizado com a função <em>theme()</em> definida como <em>theme(legend.position = “none”)</em></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="co"># Sem nenhuma legenda</span></span></code></pre></div>
+</div>
+<div id="remover-apenas-uma-entrada-de-legenda" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Remover apenas uma entrada de legenda:</h2>
+<p>Aqui vamos remover a legenda para as cores e manter a leganda para as formas
+ajustando <em>guides(color = “none”)</em></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp,</span>
+<span id="cb48-3"><a href="#cb48-3" tabindex="-1"></a>           <span class="at">color =</span> season, <span class="at">shape =</span> season)) <span class="sc">+</span></span>
+<span id="cb48-4"><a href="#cb48-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb48-5"><a href="#cb48-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperature (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb48-6"><a href="#cb48-6" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+</div>
+<div id="remover-o-título-da-legenda" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> Remover o título da legenda:</h2>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb49-3"><a href="#cb49-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb49-4"><a href="#cb49-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+</div>
+<div id="posição-da-legenda" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Posição da legenda:</h2>
+<p>Temos algumas opções:</p>
+<ul>
+<li><em>top</em></li>
+<li><em>right</em> (esse é o default)</li>
+<li><em>bottom</em></li>
+<li><em>left</em></li>
+</ul>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb50-3"><a href="#cb50-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb50-4"><a href="#cb50-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p>Também é possível podicionar a legenda dentro do gráfico</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb51-3"><a href="#cb51-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>,</span>
+<span id="cb51-4"><a href="#cb51-4" tabindex="-1"></a>       <span class="at">color =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb51-5"><a href="#cb51-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(.<span class="dv">15</span>, .<span class="dv">15</span>),</span>
+<span id="cb51-6"><a href="#cb51-6" tabindex="-1"></a>        <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;transparent&quot;</span>))</span></code></pre></div>
+<pre><code>## Warning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2
+## 3.5.0.
+## ℹ Please use the `legend.position.inside` argument of `theme()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+<div id="direção-da-legenda" class="section level2" number="10.6">
+<h2><span class="header-section-number">10.6</span> Direção da legenda:</h2>
+<p>No exemplo a seguir deixamos a legenda na direção horizontal</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb53-2"><a href="#cb53-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb53-3"><a href="#cb53-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperature (?F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb53-4"><a href="#cb53-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(.<span class="dv">5</span>, .<span class="dv">97</span>),</span>
+<span id="cb53-5"><a href="#cb53-5" tabindex="-1"></a>        <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;transparent&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb53-6"><a href="#cb53-6" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">direction =</span> <span class="st">&quot;horizontal&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+</div>
+<div id="estilo-do-título-da-legenda" class="section level2" number="10.7">
+<h2><span class="header-section-number">10.7</span> Estilo do título da legenda:</h2>
+<p>Para alteraro estílo do título da legenda adicionamos o argumento <em>legend.title</em> em <em>theme()</em></p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a><span class="co"># theme(legend.title = ())</span></span>
+<span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb54-4"><a href="#cb54-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb54-5"><a href="#cb54-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb54-6"><a href="#cb54-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;chocolate&quot;</span>,</span>
+<span id="cb54-7"><a href="#cb54-7" tabindex="-1"></a>                                    <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>Além disso é possível mudar o texto do título da legenda</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb55-2"><a href="#cb55-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb55-3"><a href="#cb55-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>,</span>
+<span id="cb55-4"><a href="#cb55-4" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Estações</span><span class="sc">\n</span><span class="st">indicadas</span><span class="sc">\n</span><span class="st">por cores:&quot;</span>) <span class="sc">+</span></span>
+<span id="cb55-5"><a href="#cb55-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;chocolate&quot;</span>,</span>
+<span id="cb55-6"><a href="#cb55-6" tabindex="-1"></a>                                    <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="co"># aqui \n é usado para qiebra de texto</span></span></code></pre></div>
+</div>
+<div id="alterar-a-ordem-dos-itens-da-legenda" class="section level2" number="10.8">
+<h2><span class="header-section-number">10.8</span> Alterar a ordem dos itens da legenda:</h2>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="co"># determinar a ordem dos níveis antes da plotagem</span></span>
+<span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a></span>
+<span id="cb57-3"><a href="#cb57-3" tabindex="-1"></a>chic<span class="sc">$</span>season <span class="ot">&lt;-</span></span>
+<span id="cb57-4"><a href="#cb57-4" tabindex="-1"></a>  <span class="fu">factor</span>(chic<span class="sc">$</span>season,</span>
+<span id="cb57-5"><a href="#cb57-5" tabindex="-1"></a>         <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Winter&quot;</span>, <span class="st">&quot;Spring&quot;</span>, <span class="st">&quot;Summer&quot;</span>, <span class="st">&quot;Autumn&quot;</span>))</span>
+<span id="cb57-6"><a href="#cb57-6" tabindex="-1"></a></span>
+<span id="cb57-7"><a href="#cb57-7" tabindex="-1"></a></span>
+<span id="cb57-8"><a href="#cb57-8" tabindex="-1"></a><span class="co"># plotar</span></span>
+<span id="cb57-9"><a href="#cb57-9" tabindex="-1"></a></span>
+<span id="cb57-10"><a href="#cb57-10" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb57-11"><a href="#cb57-11" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb57-12"><a href="#cb57-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+</div>
+<div id="alterar-os-nomes-dos-níveis-da-legenda" class="section level2" number="10.9">
+<h2><span class="header-section-number">10.9</span> Alterar os nomes dos níveis da legenda:</h2>
+<p>Caso queira definir cores específicas para os níveis.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="co"># scale_color_discrete()</span></span>
+<span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb58-6"><a href="#cb58-6" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(</span>
+<span id="cb58-7"><a href="#cb58-7" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">&quot;Seasons:&quot;</span>, </span>
+<span id="cb58-8"><a href="#cb58-8" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Mar-May&quot;</span>, <span class="st">&quot;Jun-Aug&quot;</span>, <span class="st">&quot;Sep-Nov&quot;</span>, <span class="st">&quot;Dec-Feb&quot;</span>)</span>
+<span id="cb58-9"><a href="#cb58-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb58-10"><a href="#cb58-10" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_text</span>(</span>
+<span id="cb58-11"><a href="#cb58-11" tabindex="-1"></a>     <span class="at">color =</span> <span class="st">&quot;chocolate&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="dv">2</span></span>
+<span id="cb58-12"><a href="#cb58-12" tabindex="-1"></a>  ))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+</div>
+<div id="alterar-o-preenchimento-dos-itens-da-legenda" class="section level2" number="10.10">
+<h2><span class="header-section-number">10.10</span> Alterar o preenchimento dos itens da legenda:</h2>
+<p>Como opção estética, você pode colocar cores de preenchimento nos ítens da legenda</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a><span class="co"># legend.key()</span></span>
+<span id="cb59-2"><a href="#cb59-2" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb59-4"><a href="#cb59-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb59-5"><a href="#cb59-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb59-6"><a href="#cb59-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.key =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;darkgoldenrod1&quot;</span>),</span>
+<span id="cb59-7"><a href="#cb59-7" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;chocolate&quot;</span>,</span>
+<span id="cb59-8"><a href="#cb59-8" tabindex="-1"></a>                                    <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb59-9"><a href="#cb59-9" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="st">&quot;Seasons:&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-39-1.png" width="672" />
+Ou remover o preenchimento</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="co"># sem preenchimento:</span></span>
+<span id="cb60-2"><a href="#cb60-2" tabindex="-1"></a><span class="co"># fill = NA or fill = &quot;transparent&quot;</span></span>
+<span id="cb60-3"><a href="#cb60-3" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="#cb60-4" tabindex="-1"></a><span class="co"># alterar o tamanho dos simbolos da legenda:</span></span>
+<span id="cb60-5"><a href="#cb60-5" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
+<span id="cb60-6"><a href="#cb60-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb60-7"><a href="#cb60-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb60-8"><a href="#cb60-8" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.key =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="cn">NA</span>),</span>
+<span id="cb60-9"><a href="#cb60-9" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;chocolate&quot;</span>,</span>
+<span id="cb60-10"><a href="#cb60-10" tabindex="-1"></a>                                    <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb60-11"><a href="#cb60-11" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="st">&quot;Estações:&quot;</span>) <span class="sc">+</span></span>
+<span id="cb60-12"><a href="#cb60-12" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">6</span>)))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+</div>
+<div id="outros-estilos-de-legenda-gradiente" class="section level2" number="10.11">
+<h2><span class="header-section-number">10.11</span> Outros estilos de legenda (gradiente):</h2>
+<p>Quando estamos mapeando uma variável contínua, o <em>ggplot</em> por default determina um gradiente</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb61-2"><a href="#cb61-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> temp)) <span class="sc">+</span></span>
+<span id="cb61-3"><a href="#cb61-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb61-4"><a href="#cb61-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>, <span class="at">color =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>)</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-41-1.png" width="672" />
+Mas podemos forçar a legenda a mostrar valores discretos com <em>guide_legend()</em></p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb62-2"><a href="#cb62-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> temp)) <span class="sc">+</span></span>
+<span id="cb62-3"><a href="#cb62-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb62-4"><a href="#cb62-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>, <span class="at">color =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb62-5"><a href="#cb62-5" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>())</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<p>Também podemos limtar as escalas</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb63-2"><a href="#cb63-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> temp)) <span class="sc">+</span></span>
+<span id="cb63-3"><a href="#cb63-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb63-4"><a href="#cb63-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>, <span class="at">color =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb63-5"><a href="#cb63-5" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_bins</span>())</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>Ou utilizar uma escala de cores discretas:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic,</span>
+<span id="cb64-2"><a href="#cb64-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp, <span class="at">color =</span> temp)) <span class="sc">+</span></span>
+<span id="cb64-3"><a href="#cb64-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb64-4"><a href="#cb64-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>, <span class="at">color =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb64-5"><a href="#cb64-5" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_colorsteps</span>())</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+</div>
+</div>
+<div id="planos-de-fundo-e-linhas" class="section level1" number="11">
+<h1><span class="header-section-number">11</span> Planos de fundo e linhas:</h1>
+<p>Planos de fundo e linhas podem ser alterados dentro da função <em>theme()</em></p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb65-2"><a href="#cb65-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;#1D8565&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb65-3"><a href="#cb65-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb65-4"><a href="#cb65-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(</span>
+<span id="cb65-5"><a href="#cb65-5" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;#64D2AA&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#64D2AA&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb65-6"><a href="#cb65-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## Warning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+## ℹ Please use the `linewidth` argument instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<div id="alterando-a-borda" class="section level2" number="11.1">
+<h2><span class="header-section-number">11.1</span> Alterando a borda</h2>
+<p>Observe que a cor verdadeira - o contorno do fundo do painel - não vai mudar nesse exemplo, mesmo que a tenhamos especificado. Isso ocorre porque há uma camada em cima de <em>painel.background</em>, ou seja, <em>painel.border</em></p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;#1D8565&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperature (?F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb67-4"><a href="#cb67-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(</span>
+<span id="cb67-5"><a href="#cb67-5" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;#64D2AA99&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#64D2AA&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb67-6"><a href="#cb67-6" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+</div>
+<div id="alterar-linhas" class="section level2" number="11.2">
+<h2><span class="header-section-number">11.2</span> Alterar linhas:</h2>
+<p>Para alterar as çinhas usamos <em>panel.grid()</em> ou, para cada conjunto de linhas separadamente: <em>panel.grid.major()</em> e <em>panel.grid.minor()</em></p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb68-2"><a href="#cb68-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb68-3"><a href="#cb68-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb68-4"><a href="#cb68-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;gray10&quot;</span>, <span class="at">size =</span> .<span class="dv">5</span>),</span>
+<span id="cb68-5"><a href="#cb68-5" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;gray70&quot;</span>, <span class="at">size =</span> .<span class="dv">25</span>))</span></code></pre></div>
+<pre><code>## Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+## ℹ Please use the `linewidth` argument instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p>Podemos também detalhas mais</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb70-2"><a href="#cb70-2" tabindex="-1"></a><span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb70-3"><a href="#cb70-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb70-4"><a href="#cb70-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">size =</span> .<span class="dv">5</span>, <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>),</span>
+<span id="cb70-5"><a href="#cb70-5" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">size =</span> .<span class="dv">25</span>, <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>),</span>
+<span id="cb70-6"><a href="#cb70-6" tabindex="-1"></a>        <span class="at">panel.grid.major.x =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;red1&quot;</span>),</span>
+<span id="cb70-7"><a href="#cb70-7" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;blue1&quot;</span>),</span>
+<span id="cb70-8"><a href="#cb70-8" tabindex="-1"></a>        <span class="at">panel.grid.minor.x =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;red4&quot;</span>),</span>
+<span id="cb70-9"><a href="#cb70-9" tabindex="-1"></a>        <span class="at">panel.grid.minor.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;blue4&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-48-1.png" width="672" />
+Podemos também remover as linhas</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb71-2"><a href="#cb71-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb71-3"><a href="#cb71-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb71-4"><a href="#cb71-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<p>Todas as linhas</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb72-2"><a href="#cb72-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb72-3"><a href="#cb72-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (ºF)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb72-4"><a href="#cb72-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a><span class="co"># ou theme_minimal()</span></span></code></pre></div>
+</div>
+<div id="alterar-a-cor-do-fundo" class="section level2" number="11.3">
+<h2><span class="header-section-number">11.3</span> Alterar a cor do fundo:</h2>
+<p>Aqui podemos modificar com <em>panel.background()</em> e <em>plot.backgroun()</em></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb74-2"><a href="#cb74-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb74-3"><a href="#cb74-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperatura (°F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb74-4"><a href="#cb74-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="cn">NA</span>),</span>
+<span id="cb74-5"><a href="#cb74-5" tabindex="-1"></a>        <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;gray60&quot;</span>,</span>
+<span id="cb74-6"><a href="#cb74-6" tabindex="-1"></a>                                       <span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<p>Mais um exemplo</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a><span class="fu">ggplot</span>(chic, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temp)) <span class="sc">+</span></span>
+<span id="cb75-2"><a href="#cb75-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb75-3"><a href="#cb75-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Temperature (?F)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb75-4"><a href="#cb75-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;gray60&quot;</span>),</span>
+<span id="cb75-5"><a href="#cb75-5" tabindex="-1"></a>        <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="at">t =</span> <span class="dv">1</span>, <span class="at">r =</span> <span class="dv">3</span>, <span class="at">b =</span> <span class="dv">1</span>, <span class="at">l =</span> <span class="dv">8</span>, <span class="at">unit =</span> <span class="st">&quot;cm&quot;</span>))</span></code></pre></div>
+<p><img src="introducao_ggplot_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<p>That’s all folks</p>
+<p>Espero ter ajudado</p>
+<hr />
+<p>Dra. Fernanda Rodrigues de Avila
+<a href="https://avilaf.github.io/" class="uri">https://avilaf.github.io/</a></p>
+</div>
+</div>
+</div>
+
+
+
+<script>
+// when the page is about to reload via servr, remember the scroll position
+document.addEventListener('servr:reload', function(e) {
+  sessionStorage.setItem('pagedown-scroll', window.scrollY);
+});
+</script>
+</body>
+</html>

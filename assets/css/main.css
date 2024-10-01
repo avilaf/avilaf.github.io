@@ -3373,3 +3373,38 @@ input, select, textarea {
 			font: inherit;
 		}
 	}
+
+	.slideshowContainer {
+		position: relative; /* Para posicionar os botões em relação ao container */
+		text-align: center; /* Centraliza os botões */
+	}
+	
+	/* Estilização dos botões */
+	.prev, .next {
+		cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+		position: absolute; /* Permite o posicionamento dos botões */
+		top: 50%; /* Posiciona o botão verticalmente ao centro */
+		transform: translateY(-50%); /* Ajusta o botão para o centro */
+		background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+		color: white; /* Cor do texto */
+		border: none; /* Remove bordas padrão */
+		padding: 10px 15px; /* Espacamento interno */
+		font-size: 16px; /* Tamanho da fonte */
+		border-radius: 5px; /* Arredondamento das bordas */
+		transition: background-color 0.3s; /* Efeito de transição */
+	}
+	
+	/* Posiciona o botão "prev" à esquerda */
+	.prev {
+		left: 10px; /* Espaçamento da esquerda */
+	}
+	
+	/* Posiciona o botão "next" à direita */
+	.next {
+		right: 10px; /* Espaçamento da direita */
+	}
+	
+	/* Estilo para hover (quando o mouse passa sobre o botão) */
+	.prev:hover, .next:hover {
+		background-color: rgba(0, 0, 0, 0.8); /* Escurece o fundo ao passar o mouse */
+	}

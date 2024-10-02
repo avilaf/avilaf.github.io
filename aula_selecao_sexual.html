@@ -1,122 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
-    <title>Fernanda Rodrigues de Avila | Seleção Sexual </title>
+    <title>Fernanda Rodrigues de Avila | Seleção Sexual</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
 <body class="is-preload">
+    <!-- Header -->
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="images/avatar2.png" alt="" /></span>
+            <h1 id="logo"><a href="#">Fernanda R. de Avila</a></h1>
+            <a href="./index.html">Página Inicial</a>
+            <p>
+                Bióloga desde criança :)<br />
+                Doutora em Biologia: <br />
+                Diversidade e manejo da vida silvestre <br />
+                na UNISINOS
+            </p>
+        </header>
 
-
-<!-- Header -->
-<section id="header">
-    <header>
-        <span class="image avatar"><img src="images/avatar2.png" alt="" /></span>
-        <h1 id="logo"><a href="#">Fernanda R. de Avila</a></h1>
-        <a href="./index.html"> Página Inicial <a/>
-        <p>Bióloga desde criança :)<br />
-        Doutora em Biologia: <br />
-        Diversidade e manejo da vida silvestre <br />
-        na UNISINOS</p>
-    </header>
-        
-    <footer>
-        <ul class="icons">
-            <li><a href="https://twitter.com/fernandar_avila" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://www.facebook.com/fernanda.rodriguesdeavila/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/fernandar.avila" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="mailto:fernandar.avila@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-    </footer>
-</section>
+        <footer>
+            <ul class="icons">
+                <li><a href="https://twitter.com/fernandar_avila" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/fernanda.rodriguesdeavila/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/fernandar.avila" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="mailto:fernandar.avila@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+    </section>
 
     <div id="wrapper">
-
-    <!-- Main -->
-    <div id="main">
-
-        <!-- One -->
-        <section id="one">
-            <div class="image main" data-position="center">
-                <img src="images/banner.jpg" alt="" />
-            </div>
-            <div class="container">
-
-                <header class="major">
-                    <h3>Aulas</h3>
-                </header>
-
-                <h2>Evolução Biológica - Seleção Sexual</h2>
-
-                <p>
-                    Clique nas setas para navegar pelos slides :)
-                </p>
-
-                <div id="slides-container"> <!-- Adicione esta linha -->
-
-                    <div class="slides"></div> <!-- Para evitar erros, pode ser uma div vazia ou deixe o JavaScript preenchê-la -->
+        <!-- Main -->
+        <div id="main">
+            <!-- One -->
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <img src="images/banner.jpg" alt="" />
                 </div>
+                <div class="container">
+                    <header class="major">
+                        <h3>Aulas</h3>
+                    </header>
 
-                <div class="slideshowContainer">
-                    
-                    <!-- Botões de navegação -->
-                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-                </div>
-                
-                <p> </p>
-                <p> </p>
+                    <h2>Evolução Biológica - Seleção Sexual</h2>
 
-                <p>Aula ministrada para alunos de graduação em Biologia, na disciplina de Evolução Biológica. Foram abordados aspectos teóricos de Seleção Sexual, com foco no contexto histórico da teoria, além de uma discussão sobre vieses cognitivos na ciência.</p>
-                
-                <br>
+                    <p>
+                        Clique nas setas para navegar pelos slides :)
+                    </p>
 
-                <script>
-                    // Obter o container dos slides
-                    let slideshowContainer = document.getElementById("slides-container");
-                
-                    // Criar os slides
-                    for (let i = 1; i <= 185; i++) {
-                        let slideDiv = document.createElement("div");
-                        slideDiv.classList.add("slides");
-                
-                        let img = document.createElement("img");
-                        img.src = `aulas/aula_selecao_sexual/Slide${i}.JPG`;
-                        img.style.width = "100%";
-                
-                        slideDiv.appendChild(img);
-                        slideshowContainer.appendChild(slideDiv);
-                    }
-                
-                    let slideIndex = 1; // Define o índice do slide inicial
-                    showSlides(slideIndex); // Exibe o primeiro slide
-                
-                    function changeSlide(n) {
-                        showSlides(slideIndex += n); // Muda o slide
-                    }
-                
-                    function showSlides(n) {
-                        let slides = document.getElementsByClassName("slides");
-                
-                        // Ajustar slideIndex se ultrapassar o número de slides
-                        if (n > slides.length) { slideIndex = 1; }
-                        if (n < 1) { slideIndex = slides.length; }
-                
-                        // Ocultar todos os slides
-                        for (let i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
+                    <div id="slides-container">
+                        <div class="slides"></div>
+                    </div>
+
+                    <div class="slideshowContainer">
+                        <!-- Botões de navegação -->
+                        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    </div>
+
+                    <p></p>
+                    <p></p>
+
+                    <p>
+                        Aula ministrada para alunos de graduação em Biologia, na disciplina de Evolução Biológica. Foram abordados aspectos teóricos de Seleção Sexual, com foco no contexto histórico da teoria, além de uma discussão sobre vieses cognitivos na ciência.
+                    </p>
+
+                    <br>
+
+                    <script>
+                        // Obter o container dos slides
+                        let slideshowContainer = document.getElementById("slides-container");
+
+                        // Criar os slides
+                        for (let i = 1; i <= 185; i++) {
+                            let slideDiv = document.createElement("div");
+                            slideDiv.classList.add("slides");
+
+                            let img = document.createElement("img");
+                            img.src = `aulas/aula_selecao_sexual/Slide${i}.JPG`;
+                            img.style.width = "100%";
+
+                            slideDiv.appendChild(img);
+                            slideshowContainer.appendChild(slideDiv);
                         }
-                
-                        // Mostrar o slide atual
-                        slides[slideIndex - 1].style.display = "block"; // Exibe o primeiro slide na inicialização
-                    }
-                </script>
-                
 
-            </div>
-        </section>
+                        let slideIndex = 1; // Define o índice do slide inicial
+                        showSlides(slideIndex); // Exibe o primeiro slide
+
+                        function changeSlide(n) {
+                            showSlides(slideIndex += n); // Muda o slide
+                        }
+
+                        function showSlides(n) {
+                            let slides = document.getElementsByClassName("slides");
+
+                            // Ajustar slideIndex se ultrapassar o número de slides
+                            if (n > slides.length) {
+                                slideIndex = 1;
+                            }
+                            if (n < 1) {
+                                slideIndex = slides.length;
+                            }
+
+                            // Ocultar todos os slides
+                            for (let i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+
+                            // Mostrar o slide atual
+                            slides[slideIndex - 1].style.display = "block"; // Exibe o primeiro slide na inicialização
+                        }
+                    </script>
+                </div>
+            </section>
+        </div>
     </div>
-</div>
+</body>
+
+</html>

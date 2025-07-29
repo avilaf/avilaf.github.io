@@ -215,7 +215,7 @@ Dieta de dos poblaciones de *Odontophrynus asper* [(Machado et al.,
 # install.packages("readr")
 library(readr)
 
-url &lt;- "https://raw.githubusercontent.com/avilaf/curso_r/main/datos/dados_odonto.csv"
+url &lt;- "https://raw.githubusercontent.com/avilaf/curso_r/refs/heads/main/datos/dados_odonto.csv"
 
 datos_odonto &lt;- readr::read_csv(url, 
                                 locale = locale(encoding = "UTF-8"))
@@ -1611,6 +1611,324 @@ teste_t
 ## mean in group agr mean in group nat 
 ##            40.125            59.000
 ```
+---
+layout: false
+class: inverse, middle, center
+
+# ¿Qué es un Pipe?
+
+---
+
+# ¿Qué es un Pipe?
+
+**pipe** &lt;- operador para encadenar operaciones de manera más legible
+
+En lugar de **anidar funciones** o crear múltiples **objetos intermedios**
+
+"pasar" el resultado de una operación directamente a la siguiente
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="index_files/figures/MagrittePipe.jpg" alt="The Treachery of Images, 1929, Rene Magritte" width="40%" /&gt;
+&lt;p class="caption"&gt;The Treachery of Images, 1929, Rene Magritte&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+## Los dos tipos de pipes en R
+
+- **Pipe nativo** `|&gt;`: Disponible en R base desde la versión 4.1.0
+
+- **Pipe de magrittr** `%&gt;%`: Del paquete magrittr (incluido en tidyverse)
+
+---
+
+## Problema: Código sin pipes
+
+Imagina que queremos procesar un conjunto de datos paso a paso:
+
+
+``` r
+# CÁLCULO DE CONDICIÓN CORPORAL EN ANFIBIOS 
+
+library(dplyr)
+
+# Datos de ejemplo
+datos &lt;- data.frame(
+  ind = c("1", "2", "3", "4", "5"),
+  sp = c("a", "a", "b", "b", "b"),
+  masa = c(8, 11, 12, 16, 14),
+  lhc = c(37, 38, 45, 48, 44)
+)
+
+print(datos)
+```
+
+```
+##   ind sp masa lhc
+## 1   1  a    8  37
+## 2   2  a   11  38
+## 3   3  b   12  45
+## 4   4  b   16  48
+## 5   5  b   14  44
+```
+
+---
+
+## Método tradicional (anidado) - DIFÍCIL DE LEER
+
+
+``` r
+calcular_icc_anidado &lt;- function(df) {
+  df$icc_anidado &lt;- round((df$masa / (df$lhc^3)) * 10000, digits = 4)
+  return(df)
+}
+
+# Aplicando el método anidado
+resultado_anidado &lt;- calcular_icc_anidado(datos)
+
+print(resultado_anidado[, c("ind", "sp", "masa", "lhc", "icc_anidado")])
+```
+
+```
+##   ind sp masa lhc icc_anidado
+## 1   1  a    8  37      1.5794
+## 2   2  a   11  38      2.0047
+## 3   3  b   12  45      1.3169
+## 4   4  b   16  48      1.4468
+## 5   5  b   14  44      1.6435
+```
+
+---
+## Método con objetos intermedios - MUCHAS VARIABLES
+
+
+``` r
+datos2 &lt;- data.frame(
+  ind = c("1", "2", "3", "4", "5"),
+  sp = c("a", "a", "b", "b", "b"),
+  masa = c(8, 11, 12, 16, 14),
+  lhc = c(37, 38, 45, 48, 44)
+)
+```
+
+---
+## Método con objetos intermedios  pt. 2
+
+
+``` r
+masa &lt;- datos2$masa
+lhc_cubo &lt;- c(datos2$lhc^3)
+razon &lt;- c(masa / lhc_cubo)
+escala &lt;- c(razon * 10000)
+redondear_resultado &lt;- round(escala, digits = 4)
+datos2$icc_intermedios &lt;- redondear_resultado
+
+print(datos2)
+```
+
+```
+##   ind sp masa lhc icc_intermedios
+## 1   1  a    8  37          1.5794
+## 2   2  a   11  38          2.0047
+## 3   3  b   12  45          1.3169
+## 4   4  b   16  48          1.4468
+## 5   5  b   14  44          1.6435
+```
+
+---
+
+## Solución: Usando pipes
+
+### Con el pipe de magrittr (`%&gt;%`)
+
+
+``` r
+library(dplyr)
+library(magrittr)
+
+# Método con %&gt;% - FÁCIL DE LEER
+
+datos3 &lt;- data.frame(
+  ind = c("1", "2", "3", "4", "5"),
+  sp = c("a", "a", "b", "b", "b"),
+  masa = c(8, 11, 12, 16, 14),
+  lhc = c(37, 38, 45, 48, 44)
+)
+```
+
+---
+
+### Con el pipe de magrittr (`%&gt;%`) pt. 2
+
+
+``` r
+resultado_pipe &lt;- datos3 %&gt;%
+  mutate(
+    icc_pipe = masa %&gt;%
+      divide_by(lhc^3) %&gt;%
+      multiply_by(10000) %&gt;%
+      round(digits = 4)
+    )
+
+print(resultado_pipe)
+```
+
+```
+##   ind sp masa lhc icc_pipe
+## 1   1  a    8  37   1.5794
+## 2   2  a   11  38   2.0047
+## 3   3  b   12  45   1.3169
+## 4   4  b   16  48   1.4468
+## 5   5  b   14  44   1.6435
+```
+
+---
+## Con el pipe nativo (`|&gt;`)
+
+
+``` r
+# Método con |&gt; - TAMBIÉN FÁCIL DE LEER
+datos4 &lt;- data.frame(
+  ind = c("1", "2", "3", "4", "5"),
+  sp = c("a", "a", "b", "b", "b"),
+  masa = c(8, 11, 12, 16, 14),
+  lhc = c(37, 38, 45, 48, 44)
+)
+```
+
+---
+## Con el pipe nativo (`|&gt;`) pt. 2
+
+
+
+``` r
+resultado_nativo &lt;- datos4 |&gt;
+  mutate(
+    icc_pipe = masa |&gt;
+      divide_by(lhc^3) |&gt;
+      multiply_by(10000) |&gt;
+      round(digits = 4)
+    )
+
+print(resultado_nativo)
+```
+
+```
+##   ind sp masa lhc icc_pipe
+## 1   1  a    8  37   1.5794
+## 2   2  a   11  38   2.0047
+## 3   3  b   12  45   1.3169
+## 4   4  b   16  48   1.4468
+## 5   5  b   14  44   1.6435
+```
+
+---
+
+## ¿Cómo funcionan los pipes?
+
+Los pipes toman el resultado del lado izquierdo y lo pasan como **primer argumento** a la función del lado derecho:
+
+
+``` r
+# Sin pipe
+sqrt(16)
+```
+
+```
+## [1] 4
+```
+
+``` r
+# Con %&gt;%
+16 %&gt;% sqrt()
+```
+
+```
+## [1] 4
+```
+
+``` r
+# Con |&gt;
+16 |&gt; sqrt()
+```
+
+```
+## [1] 4
+```
+
+---
+
+## Ejemplo paso a paso
+
+
+``` r
+# Creamos un vector
+numeros &lt;- c(1, 4, 9, 16, 25)
+
+# Sin pipes
+resultado1 &lt;- sqrt(sum(numeros))
+print(paste("Sin pipes:", resultado1))
+```
+
+```
+## [1] "Sin pipes: 7.41619848709566"
+```
+
+---
+## Ejemplo paso a paso pt. 2
+
+
+``` r
+# Con %&gt;%
+resultado2 &lt;- numeros %&gt;% 
+  sum() %&gt;% 
+  sqrt()
+print(paste("Con %&gt;%:", resultado2))
+```
+
+```
+## [1] "Con %&gt;%: 7.41619848709566"
+```
+
+---
+
+## Ejemplo paso a paso pt. 3
+
+
+``` r
+# Con |&gt;
+resultado3 &lt;- numeros |&gt; 
+  sum() |&gt; 
+  sqrt()
+print(paste("Con |&gt;:", resultado3))
+```
+
+```
+## [1] "Con |&gt;: 7.41619848709566"
+```
+
+---
+
+## Ventajas de usar pipes
+
+1. **Legibilidad**: El código se lee de izquierda a derecha, de arriba abajo
+
+2. **Menos objetos intermedios**: No necesitamos crear variables temporales
+
+3. **Menos errores**: Evitamos problemas con paréntesis anidados
+
+---
+
+## Consejos:
+
+## ✅ **Buenas prácticas**
+- Usa una línea por operación
+- Identa correctamente el código
+- Combina pipes con funciones de `dplyr` para análisis de datos
+
+## ❌ **Evita**
+- Pipes muy largos (más de 8-10 operaciones)
+- Mezclar `%&gt;%` y `|&gt;` en el mismo código sin razón
 
 ---
 

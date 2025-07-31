@@ -53,12 +53,7 @@
 
 
 ---
-# también puedes llamarlo de...
-
-`\(~\)`
-
-`\(~\)`
-
+# También puedes llamarlo de...
 
 
 ``` r
@@ -69,7 +64,12 @@ print("R es amigo :)")
 ## [1] "R es amigo :)"
 ```
 
+`\(~\)`
 
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="index_files/figures/repo.jpg" alt="https://github.com/avilaf/curso_r" width="80%" /&gt;
+&lt;p class="caption"&gt;https://github.com/avilaf/curso_r&lt;/p&gt;
+&lt;/div&gt;
 ---
 
 ## Qué hacer con R
@@ -95,7 +95,8 @@ print("R es amigo :)")
 
 - El **R** es un **lenguaje de programación** y un **entorno de software libre**.
 --
-`\(~\)`
+`\(~\)`dt_formatted &lt;- dt
+
 
 - Debido a su poder y flexibilidad, se utiliza ampliamente para **análisis
 estadístico**, **manipulación de datos** y **visualización gráfica**.
@@ -150,13 +151,58 @@ estadístico**, **manipulación de datos** y **visualización gráfica**.
    &lt;td style="text-align:left;"&gt; Base de gráficos &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Ecología de comunidades &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Bioinformática + mapas &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Revisión + evaluación &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Revisión + Examen &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Tarde &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Bases y prácticas &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Práctica + tarea (pt. 1/2) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Moroflogía + biocústica &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Tarea (pt. 2/2) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Presentación final &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+`\(~\)`
+
+`\(~\)`
+
+&lt;img src="index_files/figures/sapo_pc.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Plan de trabajo
+
+
+`\(~\)`
+
+&lt;table class="table table-striped table-hover" style="color: black; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Lunes &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Martes &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Miércoles &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Jueves &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Viernes &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mañana &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Presentación &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Base de gráficos &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: darkgreen !important;"&gt;Ecología de comunidades&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: darkgreen !important;"&gt;Bioinformática + mapas&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Revisión + Examen &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Tarde &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Bases y prácticas &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Práctica + tarea (pt. 1/2) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: darkgreen !important;"&gt;Moroflogía + biocústica&lt;/span&gt; &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Tarea (pt. 2/2) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Presentación final &lt;/td&gt;
   &lt;/tr&gt;
@@ -211,8 +257,8 @@ estadístico**, **manipulación de datos** y **visualización gráfica**.
 
 ## Mapas interactivos
 
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-066c2ecb21e92cd5b9ae" style="width:80%;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-066c2ecb21e92cd5b9ae">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-34.88589017,-38.12804411,-34.32937239,-32.39435582,-37.15826829,-29.33158172,-28.10371863,-27.47439357,-33.9655499,-34.37621068,-37.88461364,-37.88461364,-32.39435582,-34.32079309,-29.16379654,-34.91101339,-38.12934132,-26.99686377,-29.03145328],[-57.93823655,-61.79193903,-58.75588595,-58.86740102,-56.90694276,-50.3215797,-54.68360763,-55.14410936,-53.63045189,-55.60188093,-57.98586142,-57.98586142,-58.86740102,-58.75612096,-58.86196896,-57.89543779,-61.78758161,-51.55747358,-50.20785255],8,null,null,{"interactive":true,"className":"","stroke":false,"color":"white","weight":5,"opacity":0.5,"fill":true,"fillColor":["#E6B0AA","#FCF3CF","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#FCF3CF","#FCF3CF","#A2D9CE","#A2D9CE","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#FCF3CF","#AF7AC5","#AF7AC5"],"fillOpacity":0.9},null,null,null,null,["Local:  Argentina: Buenos Aires, La Plata <br/> Level 1:  4 <br/> Level 2:  6 <br/>","Local:  Argentina: Buenos Aires, Sierra de la Ventana <br/> Level 1:  3 <br/> Level 2:  3 <br/>","Local:  Argentina: Buenos Aires, Escobar, El Cazador <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Entre Rios, Dto. Uruguay, Basavilbaso <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, Carilo <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Brazil: Rio Grande do Sul, Sao Francisco de Paula <br/> Level 1:  4 <br/> Level 2:  6 <br/>","Local:  Brazil: Rio Grande do Sul, Cerro Largo <br/> Level 1:  3 <br/> Level 2:  4 <br/>","Local:  Argentina: Misiones, Obera, San Martin <br/> Level 1:  3 <br/> Level 2:  4 <br/>","Local:  Uruguay: Rocha, Laguna Negra <br/> Level 1:  2 <br/> Level 2:  2 <br/>","Local:  Uruguay: San Jose, Libertad, Campo Experimental Facultad de Veterinaria <br/> Level 1:  2 <br/> Level 2:  2 <br/>","Local:  Argentina: Buenos Aires, Balcarce, Laguna La Brava <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, Balcarce, Laguna La Brava <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Entre Rios, Uruguay, Basavilbaso <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, Escobar, El Cazador <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Corrientes, Lavalle, Ruta Nacional 12, km 853 <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, La Plata <br/> Level 1:  4 <br/> Level 2:  6 <br/>","Local:  Argentina: Buenos Aires, Sierra de la Ventana <br/> Level 1:  3 <br/> Level 2:  3 <br/>","Local:  Brazil: Santa Catarina, agua Doce <br/> Level 1:  1 <br/> Level 2:  1 <br/>","Local:  Brazil: Rio Grande do Sul, Cambara do Sul <br/> Level 1:  1 <br/> Level 2:  1 <br/>"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"13px","textOnly":false,"style":{"font-weight":"normal","padding":"3px 8px"},"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#AF7AC5","#A2D9CE","#FCF3CF","#E6B0AA"],"labels":["1","2","3","4"],"na_color":null,"na_label":"NA","opacity":0.9,"position":"bottomright","type":"factor","title":"Cluster","extra":null,"layerId":null,"className":"info legend","group":null}]}],"setView":[[-35,-50],4,[]],"limits":{"lat":[-38.12934132,-26.99686377],"lng":[-61.79193903,-50.20785255]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-97cea3c91a37209ff018" style="width:80%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-97cea3c91a37209ff018">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-34.88589017,-38.12804411,-34.32937239,-32.39435582,-37.15826829,-29.33158172,-28.10371863,-27.47439357,-33.9655499,-34.37621068,-37.88461364,-37.88461364,-32.39435582,-34.32079309,-29.16379654,-34.91101339,-38.12934132,-26.99686377,-29.03145328],[-57.93823655,-61.79193903,-58.75588595,-58.86740102,-56.90694276,-50.3215797,-54.68360763,-55.14410936,-53.63045189,-55.60188093,-57.98586142,-57.98586142,-58.86740102,-58.75612096,-58.86196896,-57.89543779,-61.78758161,-51.55747358,-50.20785255],8,null,null,{"interactive":true,"className":"","stroke":false,"color":"white","weight":5,"opacity":0.5,"fill":true,"fillColor":["#E6B0AA","#FCF3CF","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#FCF3CF","#FCF3CF","#A2D9CE","#A2D9CE","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#E6B0AA","#FCF3CF","#AF7AC5","#AF7AC5"],"fillOpacity":0.9},null,null,null,null,["Local:  Argentina: Buenos Aires, La Plata <br/> Level 1:  4 <br/> Level 2:  6 <br/>","Local:  Argentina: Buenos Aires, Sierra de la Ventana <br/> Level 1:  3 <br/> Level 2:  3 <br/>","Local:  Argentina: Buenos Aires, Escobar, El Cazador <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Entre Rios, Dto. Uruguay, Basavilbaso <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, Carilo <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Brazil: Rio Grande do Sul, Sao Francisco de Paula <br/> Level 1:  4 <br/> Level 2:  6 <br/>","Local:  Brazil: Rio Grande do Sul, Cerro Largo <br/> Level 1:  3 <br/> Level 2:  4 <br/>","Local:  Argentina: Misiones, Obera, San Martin <br/> Level 1:  3 <br/> Level 2:  4 <br/>","Local:  Uruguay: Rocha, Laguna Negra <br/> Level 1:  2 <br/> Level 2:  2 <br/>","Local:  Uruguay: San Jose, Libertad, Campo Experimental Facultad de Veterinaria <br/> Level 1:  2 <br/> Level 2:  2 <br/>","Local:  Argentina: Buenos Aires, Balcarce, Laguna La Brava <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, Balcarce, Laguna La Brava <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Entre Rios, Uruguay, Basavilbaso <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, Escobar, El Cazador <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Corrientes, Lavalle, Ruta Nacional 12, km 853 <br/> Level 1:  4 <br/> Level 2:  5 <br/>","Local:  Argentina: Buenos Aires, La Plata <br/> Level 1:  4 <br/> Level 2:  6 <br/>","Local:  Argentina: Buenos Aires, Sierra de la Ventana <br/> Level 1:  3 <br/> Level 2:  3 <br/>","Local:  Brazil: Santa Catarina, agua Doce <br/> Level 1:  1 <br/> Level 2:  1 <br/>","Local:  Brazil: Rio Grande do Sul, Cambara do Sul <br/> Level 1:  1 <br/> Level 2:  1 <br/>"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"13px","textOnly":false,"style":{"font-weight":"normal","padding":"3px 8px"},"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#AF7AC5","#A2D9CE","#FCF3CF","#E6B0AA"],"labels":["1","2","3","4"],"na_color":null,"na_label":"NA","opacity":0.9,"position":"bottomright","type":"factor","title":"Cluster","extra":null,"layerId":null,"className":"info legend","group":null}]}],"setView":[[-35,-50],4,[]],"limits":{"lat":[-38.12934132,-26.99686377],"lng":[-61.79193903,-50.20785255]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Slides
@@ -358,7 +404,7 @@ class: inverse, middle, center
 
 ## Entendiendo RStudio
 
-&lt;img src="index_files/figures/rstudio.jpg" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="index_files/figures/rstudio.JPG" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
@@ -377,7 +423,7 @@ Puedes ejecutar código directamente desde este panel
 
 .pull-right[
 
-&lt;img src="index_files/figures/rstudioA.jpg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="index_files/figures/rstudioA.JPG" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -396,7 +442,7 @@ Muestra la salida de los comandos R ejecutados.
 
 .pull-right[
 
-&lt;img src="index_files/figures/rstudioB.jpg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="index_files/figures/rstudioB.JPG" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -417,7 +463,7 @@ Dos secciones principales:
 ]
 
 .pull-right[
-&lt;img src="index_files/figures/rstudioC.jpg" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="index_files/figures/rstudioC.JPG" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -439,7 +485,7 @@ Dos secciones principales:
 ]
 
 .pull-right[
-&lt;img src="index_files/figures/rstudioD.jpg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="index_files/figures/rstudioD.JPG" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 
@@ -507,29 +553,21 @@ atajos:
 **Ejecutar línea por línea:** 
 
 1. Selecciona la línea que contiene el código 
-2. Presiona `Ctrl + Enter` (Windows/Linux) o `Cmd + Enter` (Mac) 
+2. Presiona `Ctrl + Enter` (Windows/Linux) o `Cmd + Enter` (Mac); O haz clic en el botón `Run` en la esquina superior derecha del panel de scripts
 3. El código se enviará a la consola y se ejecutará inmediatamente
 
 --
 
 **Ejecutar todo el script:** 
 
-1. Haz clic en el botón "Run" en la esquina superior derecha del panel de scripts 
-2. O presiona `Ctrl + Shift + Enter` (Windows/Linux) o `Cmd + Shift + Enter` (Mac)
+Selecciona todo el código + `Run`
 
----
 
-`\(~\)`
-
-`\(~\)`
-
-`\(~\)`
+--
 
 **Consejos adicionales:**
 
 - Para ejecutar un bloque de código seleccionado, usa el mismo atajo después de seleccionar el texto 
-
-- `Ctrl + Alt + R` (Windows/Linux) o `Cmd + Option + R` (Mac) para ejecutar todo el script 
 
 - Los resultados aparecerán en la consola inferior de RStudio
 

@@ -11,7 +11,7 @@
 
 <meta name="author" content="Dra. Fernanda Rodrigues de Avila" />
 
-<meta name="date" content="2025-07-11" />
+<meta name="date" content="2025-07-24" />
 
 <title>Tutorial de instalación</title>
 
@@ -352,7 +352,7 @@ display: none;
 
 <h1 class="title toc-ignore">Tutorial de instalación</h1>
 <h4 class="author">Dra. Fernanda Rodrigues de Avila</h4>
-<h4 class="date">2025-07-11</h4>
+<h4 class="date">2025-07-24</h4>
 
 </div>
 
@@ -588,25 +588,160 @@ usarás durante la formación.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Instalación de paquetes</strong>:</li>
 </ol>
-<pre class="r"><code># Ejecuta estos comandos uno por uno:
-install.packages(&quot;car&quot;)       # Análisis de regresión
-install.packages(&quot;readr&quot;)     # Lectura de datos
-install.packages(&quot;ggplot2&quot;)   # Visualización avanzada
-install.packages(&quot;dplyr&quot;)     # Manipulación de datos
-install.packages(&quot;lme4&quot;)      # Modelos lineales mixtos
-install.packages(&quot;MASS&quot;)      # Métodos estadísticos
-install.packages(&quot;EcoSimR&quot;)   # Nicho ecológico</code></pre>
+<pre class="r"><code># -----------------------------
+# Paquetes del Tidyverse
+# -----------------------------
+
+install.packages(&quot;tidyverse&quot;)         # Conjunto de paquetes para ciencia de datos: dplyr, ggplot2, tidyr, readr, etc.
+install.packages(&quot;readr&quot;)             # Lectura eficiente de archivos de texto/tablas (.csv, .tsv)
+install.packages(&quot;dplyr&quot;)             # Manipulación de datos con gramática intuitiva (filter, select, mutate, etc.)
+install.packages(&quot;ggplot2&quot;)           # Sistema de gráficos basado en capas
+
+# -----------------------------
+# Visualización y gráficos
+# -----------------------------
+
+install.packages(&quot;ggiraph&quot;)           # Visualizaciones interactivas con ggplot2 (tooltip, enlaces, etc.)
+install.packages(&quot;GGally&quot;)            # Extensión de ggplot2 para crear matrices de gráficos (pairs plots)
+install.packages(&quot;patchwork&quot;)         # Composición de múltiples gráficos ggplot en un solo layout
+install.packages(&quot;plotly&quot;)            # Gráficos interactivos basados en ggplot o nativos
+install.packages(&quot;gridExtra&quot;)         # Organización de gráficos en grillas (grid.arrange, etc.)
+install.packages(&quot;corrplot&quot;)          # Visualización de matrices de correlación
+install.packages(&quot;RColorBrewer&quot;)      # Paletas de colores predefinidas y estéticas para mapas y gráficos
+install.packages(&quot;pheatmap&quot;)          # Gráficos de calor (heatmaps) con anotaciones y clustering
+install.packages(&quot;leaflet&quot;)           # Mapas interactivos basados en JavaScript (OpenStreetMap, etc.)
+
+# -----------------------------
+# Análisis estadístico y multivariado
+# -----------------------------
+
+install.packages(&quot;car&quot;)               # Herramientas para regresión lineal (tests, VIF, etc.)
+install.packages(&quot;lme4&quot;)              # Modelos lineales y generalizados mixtos
+install.packages(&quot;MASS&quot;)              # Métodos y datos estadísticos clásicos (stepAIC, etc.)
+install.packages(&quot;FactoMineR&quot;)        # Análisis multivariado: ACP, MCA, clustering, etc.
+install.packages(&quot;factoextra&quot;)        # Visualización de resultados de FactoMineR
+install.packages(&quot;cluster&quot;)           # Algoritmos de clustering (k-means, PAM, etc.)
+install.packages(&quot;broom&quot;)             # Convierte resultados estadísticos en data frames ordenados (tidy output)
+install.packages(&quot;betapart&quot;)          # Análisis de beta diversidad (ecología)
+install.packages(&quot;vegan&quot;)             # Análisis multivariado en ecología (NMDS, PERMANOVA, etc.)
+
+# -----------------------------
+# Fechas, texto y otros datos
+# -----------------------------
+
+install.packages(&quot;lubridate&quot;)         # Manejo de fechas y horas de forma sencilla
+install.packages(&quot;stringdist&quot;)        # Cálculo de distancias entre cadenas de texto (Levenshtein, Jaro, etc.)
+install.packages(&quot;plyr&quot;)              # Versión antigua de dplyr; útil para código heredado
+
+# -----------------------------
+# Datos geográficos y mapas
+# -----------------------------
+
+install.packages(&quot;sf&quot;)                # Lectura y manipulación de datos espaciales (shapefiles, geometrías)
+install.packages(&quot;mapdata&quot;)           # Datos geográficos para mapas básicos (costas, países, etc.)
+install.packages(&quot;rnaturalearth&quot;)     # Mapas base de países y continentes
+install.packages(&quot;rnaturalearthdata&quot;) # Datos acompañantes para rnaturalearth
+install.packages(&quot;rgbif&quot;)             # Descarga de datos de biodiversidad desde GBIF (Global Biodiversity Info)
+
+# -----------------------------
+# Genética y filogenia
+# -----------------------------
+
+install.packages(&quot;ape&quot;)               # Análisis filogenético y evolutivo
+install.packages(&quot;rhierbaps&quot;)         # Agrupamiento jerárquico de secuencias genómicas
+install.packages(&quot;BiocManager&quot;)       # Gestor de paquetes Bioconductor
+
+BiocManager::install(&quot;ggtree&quot;)        # Visualización de árboles filogenéticos con ggplot2
+BiocManager::install(&quot;msa&quot;)           # Alineamiento múltiple de secuencias (con Clustal, MUSCLE, etc.)
+BiocManager::install(&quot;Biostrings&quot;)    # Manipulación eficiente de secuencias de ADN/RNA
+BiocManager::install(&quot;phangorn&quot;)      # Reconstrucción y evaluación de árboles filogenéticos
+
+# -----------------------------
+# Audio
+# -----------------------------
+
+install.packages(&quot;SoundShape&quot;)        # Análisis de morfología acústica (sonidos, bioacústica)
+
+
+
+
+install.packages(&quot;beepr&quot;)             # ¡sorpresa! :)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Verificación de la instalación</strong>:</li>
 </ol>
-<pre class="r"><code># Carga los paquetes para confirmar la instalación
-library(car)
-library(readr) 
-library(ggplot2)
-library(dplyr)
-library(lme4)
-library(MASS)
-require(EcoSimR)</code></pre>
+<pre class="r"><code># -----------------------------
+# Cargar paquetes del Tidyverse
+# -----------------------------
+
+library(tidyverse)         # Conjunto de paquetes para ciencia de datos
+library(readr)             # Lectura eficiente de archivos
+library(dplyr)             # Manipulación de datos
+library(ggplot2)           # Visualización avanzada
+
+# -----------------------------
+# Visualización y gráficos
+# -----------------------------
+
+library(ggiraph)           # Visualizaciones interactivas con ggplot2
+library(GGally)            # Matrices de gráficos
+library(patchwork)         # Composición de gráficos
+library(plotly)            # Gráficos interactivos
+library(gridExtra)         # Organización de gráficos
+library(corrplot)          # Matrices de correlación
+library(RColorBrewer)      # Paletas de colores
+library(pheatmap)          # Gráficos de calor
+library(leaflet)           # Mapas interactivos
+
+# -----------------------------
+# Análisis estadístico y multivariado
+# -----------------------------
+
+library(car)               # Herramientas para regresión
+library(lme4)              # Modelos lineales mixtos
+library(MASS)              # Métodos estadísticos clásicos
+library(FactoMineR)        # Análisis multivariado
+library(factoextra)        # Visualización de multivariados
+library(cluster)           # Clustering
+library(broom)             # Limpieza de outputs estadísticos
+library(betapart)          # Diversidad beta
+library(vegan)             # Análisis ecológico multivariado
+
+# -----------------------------
+# Fechas, texto y otros datos
+# -----------------------------
+
+library(lubridate)         # Manejo de fechas
+library(stringdist)        # Distancias de texto
+library(plyr)              # Manipulación de datos (legacy)
+
+# -----------------------------
+# Datos geográficos y mapas
+# -----------------------------
+
+library(sf)                # Datos espaciales
+library(mapdata)           # Datos geográficos básicos
+library(rnaturalearth)     # Mapas base
+library(rnaturalearthdata) # Datos para mapas base
+library(rgbif)             # Datos de biodiversidad (GBIF)
+
+# -----------------------------
+# Genética y filogenia
+# -----------------------------
+
+library(ape)               # Filogenia y evolución
+library(rhierbaps)         # Clustering jerárquico genómico
+library(ggtree)            # Visualización de árboles filogenéticos
+library(msa)               # Alineamiento de secuencias
+library(Biostrings)        # Manipulación de secuencias genéticas
+library(phangorn)          # Reconstrucción de árboles
+
+# -----------------------------
+# Audio
+# -----------------------------
+
+library(SoundShape)        # Análisis morfológico acústico
+
+library(beepr)             # ¡sorpresa! :)</code></pre>
 <div id="notas-importantes" class="section level3">
 <h3>Notas importantes:</h3>
 <ul>
